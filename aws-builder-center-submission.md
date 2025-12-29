@@ -163,8 +163,8 @@ DevToolkit demonstrates AI's potential to transform development workflows withou
 
 For developers seeking productivity gains, AI-assisted development offers remarkable benefits. The key is leveraging AI for implementation while maintaining human oversight for architecture and user experience decisions.
 
-**Try DevToolkit**: [Live Demo](https://your-username.github.io/devtoolkit)  
-**Source Code**: [GitHub Repository](https://github.com/your-username/devtoolkit)
+**Try DevToolkit**: [Live Demo](https://arnabsen08.github.io/devtoolkit)  
+**Source Code**: [GitHub Repository](https://github.com/ArnabSen08/devtoolkit)
 
 ---
 

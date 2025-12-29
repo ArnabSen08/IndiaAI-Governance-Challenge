@@ -7,7 +7,7 @@
 
 ## 🚀 Live Demo
 
-[View Live Demo](https://your-username.github.io/devtoolkit) *(Replace with your actual GitHub Pages URL)*
+[View Live Demo](https://arnabsen08.github.io/devtoolkit)
 
 ## 📋 Overview
 
@@ -88,7 +88,7 @@ DevToolkit is a comprehensive web application that combines seven essential deve
 ### Installation
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/devtoolkit.git
+   git clone https://github.com/ArnabSen08/devtoolkit.git
    ```
 
 2. Navigate to the project directory:
@@ -167,7 +167,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 Your Name - [@your_twitter](https://twitter.com/your_twitter) - your.email@example.com
 
-Project Link: [https://github.com/your-username/devtoolkit](https://github.com/your-username/devtoolkit)
+Project Link: [https://github.com/ArnabSen08/devtoolkit](https://github.com/ArnabSen08/devtoolkit)
 
 ---
 
