@@ -1,0 +1,7 @@
+# Smart Desktop Organizer Requirements
+# This project uses only Python standard library
+# No external dependencies required for core functionality
+
+# Optional dependencies for enhanced features:
+# colorama>=0.4.4  # For colored terminal output (Windows compatibility)
+# tqdm>=4.64.0     # For progress bars with large file sets
