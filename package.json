@@ -1,0 +1,38 @@
+{
+  "name": "devtoolkit",
+  "version": "1.0.0",
+  "description": "Essential developer utilities in one place - Password checker, case converter, color contrast, JSON formatter, QR generator, timezone converter, and lorem ipsum generator",
+  "main": "index.html",
+  "scripts": {
+    "start": "python -m http.server 8000",
+    "serve": "npx http-server -p 8000",
+    "build": "echo 'No build process needed for static site'",
+    "deploy": "echo 'Deploy to your preferred static hosting service'"
+  },
+  "keywords": [
+    "developer-tools",
+    "utilities",
+    "password-checker",
+    "case-converter",
+    "color-contrast",
+    "json-formatter",
+    "qr-generator",
+    "timezone-converter",
+    "lorem-ipsum",
+    "web-tools",
+    "frontend",
+    "javascript",
+    "html",
+    "css"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/devtoolkit.git"
+  },
+  "homepage": "https://your-username.github.io/devtoolkit",
+  "bugs": {
+    "url": "https://github.com/your-username/devtoolkit/issues"
+  }
+}
