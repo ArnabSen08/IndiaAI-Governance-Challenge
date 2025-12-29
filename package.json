@@ -1,0 +1,23 @@
+{
+  "name": "bangalore-tech-culture-assistant",
+  "version": "1.0.0",
+  "description": "A Kiro-powered local guide for Bangalore's tech culture",
+  "main": "index.js",
+  "scripts": {
+    "test": "python test-scenarios.py",
+    "demo": "echo 'Run the assistant and try the examples in demo-examples.md'"
+  },
+  "keywords": [
+    "bangalore",
+    "tech-culture",
+    "local-guide",
+    "kiro",
+    "agent-steering"
+  ],
+  "author": "Arnab Sen",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/bangalore-tech-culture-assistant"
+  }
+}
