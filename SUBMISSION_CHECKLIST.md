@@ -81,7 +81,7 @@
 ### Local Development Setup
 ```bash
 # 1. Clone repository
-git clone <your-github-repo-url>
+git clone https://github.com/ArnabSen08/data-weaver-dashboard.git
 cd data-weaver-dashboard
 
 # 2. Install dependencies
@@ -162,7 +162,7 @@ npm run dev
 7. [ ] Get published AWS Builder Center article URL
 
 ### Submission Form Data:
-- **GitHub Repository**: `https://github.com/yourusername/data-weaver-dashboard`
+- **GitHub Repository**: `https://github.com/ArnabSen08/data-weaver-dashboard`
 - **AWS Builder Center Blog**: `https://aws.amazon.com/builders-library/your-article-url`
 - **Challenge**: [Kiro Week 3 Challenge] The Data Weaver
 

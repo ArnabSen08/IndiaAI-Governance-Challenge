@@ -281,7 +281,7 @@ The future of development is collaborative - humans providing creativity and vis
 
 **Try it yourself**: Clone the repository and explore the correlations between weather and markets in your city. You might be surprised by what you discover!
 
-**Repository**: [GitHub Link - Replace with your actual repository URL]
+**Repository**: https://github.com/ArnabSen08/data-weaver-dashboard
 
 **Live Demo**: [Demo Link - If deployed]
 

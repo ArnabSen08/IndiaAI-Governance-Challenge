@@ -43,7 +43,7 @@ The dashboard reveals interesting patterns like how rainy days might correlate w
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/data-weaver-dashboard.git
+git clone https://github.com/ArnabSen08/data-weaver-dashboard.git
 
 # Install dependencies
 npm install
