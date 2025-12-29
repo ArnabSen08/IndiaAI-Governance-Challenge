@@ -85,14 +85,15 @@ class TestFileOrganizer(unittest.TestCase):
         # Create duplicate files
         (self.test_dir / "duplicate.txt").write_text("original")
         
-        organizer = FileOrganizer(self.test_dir, self.output_dir, dry_run=False)
-        
         # Simulate a duplicate by pre-creating the target
-        target_dir = self.output_dir / "Documents" / "2024-12"
+        from datetime import datetime
+        date_folder = datetime.now().strftime("%Y-%m")
+        target_dir = self.output_dir / "Documents" / date_folder
         target_dir.mkdir(parents=True, exist_ok=True)
         (target_dir / "duplicate.txt").write_text("existing")
         
         # Now organize - should create duplicate_1.txt
+        organizer = FileOrganizer(self.test_dir, self.output_dir, dry_run=False)
         organizer.organize_files()
         
         # Both files should exist
