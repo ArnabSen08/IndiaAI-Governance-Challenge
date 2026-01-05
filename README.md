@@ -23,6 +23,8 @@ The Referee is an intelligent decision-making assistant that:
 ### GitHub Pages Demo (Static)
 Visit the live demo: **https://arnabsen08.github.io/the-referee/**
 
+*Note: The site will be available shortly after the GitHub Actions deployment completes.*
+
 ### Local Development (Full API)
 ```bash
 # Clone the repository
