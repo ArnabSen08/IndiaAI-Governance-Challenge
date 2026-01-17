@@ -6,6 +6,18 @@ description: "Unified AI Platform for Social Impact - AWS AI for Bharat Hackatho
 url: "https://arnabsen08.github.io"
 baseurl: "/bharat-ai-hub"
 
+# GitHub Pages specific settings
+source: .
+destination: ./_site
+safe: true
+incremental: false
+highlighter: rouge
+gist:
+  noscript: false
+kramdown:
+  math_engine: mathjax
+  syntax_highlighter: rouge
+
 # Author
 author:
   name: "Arnab Sen"
