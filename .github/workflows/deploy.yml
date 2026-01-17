@@ -40,17 +40,15 @@ jobs:
         cd frontend
         npm run build
 
-    - name: Copy docs to build
+    - name: Setup deployment structure
       run: |
-        # Create app directory for React app
-        mkdir -p frontend/dist/app
-        cp frontend/dist/index.html frontend/dist/app/
-        cp -r frontend/dist/assets frontend/dist/app/
-        # Copy docs
+        # Keep the React app at root for the DApp functionality
+        # Create a landing directory for the marketing page
+        mkdir -p frontend/dist/landing
+        cp -r docs/* frontend/dist/landing/
+        # Create docs directory as well for compatibility
         mkdir -p frontend/dist/docs
         cp -r docs/* frontend/dist/docs/
-        # Copy the main landing page to root
-        cp docs/index.html frontend/dist/
 
     - name: Setup Pages
       uses: actions/configure-pages@v4
