@@ -26,10 +26,17 @@ jobs:
         cd frontend
         npm ci
 
-    - name: Build
+    - name: Build React App
       run: |
         cd frontend
         npm run build
+
+    - name: Copy docs to build
+      run: |
+        mkdir -p frontend/dist/docs
+        cp -r docs/* frontend/dist/docs/
+        # Also copy the main landing page to root
+        cp docs/index.html frontend/dist/
 
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3

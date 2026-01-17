@@ -12,7 +12,8 @@
     "frontend:build": "cd frontend && npm run build",
     "dev": "npm run frontend:dev",
     "build": "npm run compile && npm run frontend:build",
-    "install:all": "npm install && npm run frontend:install"
+    "install:all": "npm install && npm run frontend:install",
+    "setup": "node setup.js"
   },
   "keywords": [
     "blockchain",
