@@ -42,13 +42,17 @@ jobs:
 
     - name: Setup deployment structure
       run: |
-        # Keep the React app at root for the DApp functionality
-        # Create a landing directory for the marketing page
-        mkdir -p frontend/dist/landing
-        cp -r docs/* frontend/dist/landing/
-        # Create docs directory as well for compatibility
+        # Put React app in /app directory
+        mkdir -p frontend/dist/app
+        cp frontend/dist/index.html frontend/dist/app/
+        cp -r frontend/dist/assets frontend/dist/app/
+        # Put landing page at root
+        cp docs/index.html frontend/dist/
+        # Also create docs and landing directories for compatibility
         mkdir -p frontend/dist/docs
         cp -r docs/* frontend/dist/docs/
+        mkdir -p frontend/dist/landing
+        cp -r docs/* frontend/dist/landing/
 
     - name: Setup Pages
       uses: actions/configure-pages@v4
