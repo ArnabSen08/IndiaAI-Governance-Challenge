@@ -44,4 +44,7 @@ const abi = [
   },
 ];
 
-export default new web3.eth.Contract(abi, address);
+// Check if contract address is configured
+export const isContractConfigured = address !== "YOUR_DEPLOYED_CONTRACT_ADDRESS_HERE";
+
+export default isContractConfigured ? new web3.eth.Contract(abi, address) : null;

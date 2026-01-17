@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import web3 from "./web3";
-import lottery from "./lottery";
+import web3, { isWeb3Available } from "./web3";
+import lottery, { isContractConfigured } from "./lottery";
 import "./App.css";
 
 function App() {
@@ -14,6 +14,21 @@ function App() {
 
   useEffect(() => {
     async function fetchData() {
+      if (!isWeb3Available) {
+        setMessage("⚠️ MetaMask not detected. Please install MetaMask to use this DApp.");
+        return;
+      }
+
+      if (!isContractConfigured) {
+        setMessage("⚠️ Smart contract not deployed yet. Please deploy the contract first.");
+        return;
+      }
+
+      if (!web3 || !lottery) {
+        setMessage("⚠️ Failed to connect to Web3. Please check your MetaMask connection.");
+        return;
+      }
+
       try {
         const manager = await lottery.methods.manager().call();
         const players = await lottery.methods.getPlayers().call();
@@ -24,9 +39,10 @@ function App() {
         setPlayers(players);
         setBalance(balance);
         setAccount(accounts[0] || "");
+        setMessage(""); // Clear any error messages
       } catch (error) {
         console.error("Error fetching data:", error);
-        setMessage("Error connecting to the blockchain. Please check your MetaMask connection.");
+        setMessage("❌ Error connecting to the smart contract. Please make sure you're on Sepolia testnet.");
       }
     }
 
@@ -35,6 +51,11 @@ function App() {
 
   async function handleSubmit(event) {
     event.preventDefault();
+    
+    if (!isContractConfigured) {
+      setMessage("⚠️ Smart contract not deployed yet.");
+      return;
+    }
     
     if (!value || parseFloat(value) < 0.01) {
       setMessage("Please enter at least 0.01 ETH to participate!");
@@ -69,6 +90,11 @@ function App() {
   }
 
   async function handleClick() {
+    if (!isContractConfigured) {
+      setMessage("⚠️ Smart contract not deployed yet.");
+      return;
+    }
+
     setLoading(true);
     setMessage("Waiting on transaction success...");
 
@@ -96,6 +122,80 @@ function App() {
 
   const isManager = account && manager && account.toLowerCase() === manager.toLowerCase();
 
+  // Show setup instructions if contract is not configured
+  if (!isContractConfigured) {
+    return (
+      <div className="app">
+        <div className="container">
+          <header className="header">
+            <h1>🎰 Blockchain Lottery DApp</h1>
+            <p className="subtitle">Smart Contract Setup Required</p>
+          </header>
+
+          <div className="info-card">
+            <h2>🚀 Ready to Deploy!</h2>
+            <p style={{ marginBottom: '20px', fontSize: '1.1rem', lineHeight: '1.6' }}>
+              Your DApp is ready, but the smart contract needs to be deployed first.
+            </p>
+            
+            <div className="setup-steps">
+              <h3>Setup Steps:</h3>
+              <ol style={{ textAlign: 'left', marginLeft: '20px', lineHeight: '1.8' }}>
+                <li>Clone the repository: <code>git clone https://github.com/ArnabSen08/blockchain-lottery-dapp.git</code></li>
+                <li>Install dependencies: <code>npm install</code></li>
+                <li>Create <code>.env</code> file with your MetaMask private key and Infura URL</li>
+                <li>Deploy to Sepolia: <code>npm run deploy</code></li>
+                <li>Update <code>frontend/src/lottery.js</code> with the deployed contract address</li>
+                <li>Rebuild and redeploy the frontend</li>
+              </ol>
+            </div>
+
+            <div className="warning">
+              <p><strong>⚠️ Important:</strong> Use only testnet ETH and a development wallet!</p>
+            </div>
+
+            <div style={{ marginTop: '30px' }}>
+              <a href="https://github.com/ArnabSen08/blockchain-lottery-dapp" className="btn btn-primary" target="_blank" rel="noopener noreferrer">
+                📚 View Setup Guide
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  // Show MetaMask connection prompt if Web3 is not available
+  if (!isWeb3Available) {
+    return (
+      <div className="app">
+        <div className="container">
+          <header className="header">
+            <h1>🎰 Blockchain Lottery DApp</h1>
+            <p className="subtitle">MetaMask Required</p>
+          </header>
+
+          <div className="info-card">
+            <h2>🦊 Install MetaMask</h2>
+            <p style={{ marginBottom: '20px', fontSize: '1.1rem' }}>
+              This DApp requires MetaMask to interact with the Ethereum blockchain.
+            </p>
+            
+            <div style={{ marginBottom: '20px' }}>
+              <a href="https://metamask.io/download/" className="btn btn-primary" target="_blank" rel="noopener noreferrer">
+                Download MetaMask
+              </a>
+            </div>
+
+            <p style={{ fontSize: '0.9rem', color: '#666' }}>
+              After installing MetaMask, refresh this page to continue.
+            </p>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="app">
       <div className="container">
@@ -109,11 +209,11 @@ function App() {
           <div className="info-grid">
             <div className="info-item">
               <span className="label">Manager:</span>
-              <span className="value">{manager}</span>
+              <span className="value">{manager || "Loading..."}</span>
             </div>
             <div className="info-item">
               <span className="label">Your Account:</span>
-              <span className="value">{account}</span>
+              <span className="value">{account || "Not connected"}</span>
             </div>
             <div className="info-item">
               <span className="label">Players:</span>
@@ -121,7 +221,7 @@ function App() {
             </div>
             <div className="info-item">
               <span className="label">Prize Pool:</span>
-              <span className="value">{web3.utils.fromWei(balance, "ether")} ETH</span>
+              <span className="value">{web3 ? web3.utils.fromWei(balance, "ether") : "0"} ETH</span>
             </div>
           </div>
         </div>
