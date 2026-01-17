@@ -83,6 +83,9 @@ Revolutionary AI-powered solution addressing **healthcare, retail, rural develop
     <li style="padding: 5px 0; color: #2d3748;"><span style="color: #48bb78; font-weight: bold;">✓</span> Telemedicine platform with AI triage</li>
     <li style="padding: 5px 0; color: #2d3748;"><span style="color: #48bb78; font-weight: bold;">✓</span> Multi-language health information</li>
   </ul>
+  <div style="margin-top: 20px;">
+    <a href="healthcare/" target="_blank" style="background: #667eea; color: white; padding: 10px 20px; border-radius: 8px; text-decoration: none; font-weight: 600; display: inline-block;">🏥 Explore Healthcare Module</a>
+  </div>
 </div>
 
 <div style="background: white; border-radius: 12px; padding: 30px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); border-top: 4px solid #48bb78;">
@@ -95,6 +98,9 @@ Revolutionary AI-powered solution addressing **healthcare, retail, rural develop
     <li style="padding: 5px 0; color: #2d3748;"><span style="color: #48bb78; font-weight: bold;">✓</span> Customer behavior analytics</li>
     <li style="padding: 5px 0; color: #2d3748;"><span style="color: #48bb78; font-weight: bold;">✓</span> Voice commerce in regional languages</li>
   </ul>
+  <div style="margin-top: 20px;">
+    <a href="retail/" target="_blank" style="background: #48bb78; color: white; padding: 10px 20px; border-radius: 8px; text-decoration: none; font-weight: 600; display: inline-block;">🛒 Explore Retail Module</a>
+  </div>
 </div>
 
 <div style="background: white; border-radius: 12px; padding: 30px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); border-top: 4px solid #ed8936;">
@@ -107,6 +113,9 @@ Revolutionary AI-powered solution addressing **healthcare, retail, rural develop
     <li style="padding: 5px 0; color: #2d3748;"><span style="color: #48bb78; font-weight: bold;">✓</span> Market linkage platform</li>
     <li style="padding: 5px 0; color: #2d3748;"><span style="color: #48bb78; font-weight: bold;">✓</span> Weather and soil analytics</li>
   </ul>
+  <div style="margin-top: 20px;">
+    <a href="rural/" target="_blank" style="background: #ed8936; color: white; padding: 10px 20px; border-radius: 8px; text-decoration: none; font-weight: 600; display: inline-block;">🌾 Explore Rural Module</a>
+  </div>
 </div>
 
 <div style="background: white; border-radius: 12px; padding: 30px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); border-top: 4px solid #9f7aea;">
@@ -119,6 +128,9 @@ Revolutionary AI-powered solution addressing **healthcare, retail, rural develop
     <li style="padding: 5px 0; color: #2d3748;"><span style="color: #48bb78; font-weight: bold;">✓</span> Code assistant for developers</li>
     <li style="padding: 5px 0; color: #2d3748;"><span style="color: #48bb78; font-weight: bold;">✓</span> Skill gap analysis and guidance</li>
   </ul>
+  <div style="margin-top: 20px;">
+    <a href="learning/" target="_blank" style="background: #9f7aea; color: white; padding: 10px 20px; border-radius: 8px; text-decoration: none; font-weight: 600; display: inline-block;">📚 Explore Learning Module</a>
+  </div>
 </div>
 
 <div style="background: white; border-radius: 12px; padding: 30px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); border-top: 4px solid #f093fb;">
@@ -131,6 +143,9 @@ Revolutionary AI-powered solution addressing **healthcare, retail, rural develop
     <li style="padding: 5px 0; color: #2d3748;"><span style="color: #48bb78; font-weight: bold;">✓</span> AI-powered content moderation</li>
     <li style="padding: 5px 0; color: #2d3748;"><span style="color: #48bb78; font-weight: bold;">✓</span> Video analytics and accessibility</li>
   </ul>
+  <div style="margin-top: 20px;">
+    <a href="content/" target="_blank" style="background: #f093fb; color: white; padding: 10px 20px; border-radius: 8px; text-decoration: none; font-weight: 600; display: inline-block;">🎬 Explore Content Module</a>
+  </div>
 </div>
 
 <div style="background: white; border-radius: 12px; padding: 30px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); border-top: 4px solid #38b2ac;">
@@ -143,6 +158,9 @@ Revolutionary AI-powered solution addressing **healthcare, retail, rural develop
     <li style="padding: 5px 0; color: #2d3748;"><span style="color: #48bb78; font-weight: bold;">✓</span> Real-time emergency response</li>
     <li style="padding: 5px 0; color: #2d3748;"><span style="color: #48bb78; font-weight: bold;">✓</span> Community resource mapping</li>
   </ul>
+  <div style="margin-top: 20px;">
+    <a href="community/" target="_blank" style="background: #38b2ac; color: white; padding: 10px 20px; border-radius: 8px; text-decoration: none; font-weight: 600; display: inline-block;">🤝 Explore Community Module</a>
+  </div>
 </div>
 
 </div>
