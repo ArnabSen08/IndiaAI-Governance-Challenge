@@ -1,0 +1,78 @@
+# GitHub Pages Configuration for Bharat AI Hub
+
+# Site settings
+title: "Bharat AI Hub"
+description: "Unified AI Platform for Social Impact - AWS AI for Bharat Hackathon 2026"
+url: "https://arnabsen08.github.io"
+baseurl: "/bharat-ai-hub"
+
+# Author
+author:
+  name: "Arnab Sen"
+  email: "beanclarksum@gmail.com"
+  github: "ArnabSen08"
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+theme: minima
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# Exclude files
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - README.md
+
+# Include files
+include:
+  - _pages
+
+# Collections
+collections:
+  docs:
+    output: true
+    permalink: /:collection/:name/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+      type: "docs"
+    values:
+      layout: "page"
+
+# SEO
+google_analytics: # Add your GA tracking ID if needed
+google_site_verification: # Add your verification code if needed
+
+# Social
+github_username: ArnabSen08
+repository: "ArnabSen08/bharat-ai-hub"
+
+# Custom variables
+hackathon:
+  name: "AWS AI for Bharat Hackathon 2026"
+  year: 2026
+  
+project:
+  name: "Bharat AI Hub"
+  tagline: "Unified AI Platform for Social Impact"
+  modules: 6
+  aws_services: 12
+  languages: 22

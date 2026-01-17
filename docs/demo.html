@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Demo - Bharat AI Hub</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #667eea;
+            --secondary: #764ba2;
+            --success: #48bb78;
+            --error: #f56565;
+            --gray-50: #f7fafc;
+            --gray-100: #edf2f7;
+            --gray-800: #1a202c;
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--gray-50);
+            color: var(--gray-800);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            text-align: center;
+            padding: 60px 0;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            margin-bottom: 40px;
+        }
+
+        .header h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        .demo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .demo-card {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .demo-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .demo-card h3 {
+            color: var(--primary);
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+
+        .demo-card h3 i {
+            margin-right: 10px;
+            font-size: 1.5rem;
+        }
+
+        .demo-form {
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid var(--gray-100);
+            border-radius: 8px;
+            font-size: 14px;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--primary);
+        }
+
+        .btn {
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn:hover {
+            background: var(--secondary);
+            transform: translateY(-2px);
+        }
+
+        .btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .result {
+            margin-top: 20px;
+            padding: 20px;
+            border-radius: 8px;
+            display: none;
+        }
+
+        .result.success {
+            background: #f0fff4;
+            border: 1px solid var(--success);
+            color: #22543d;
+        }
+
+        .result.error {
+            background: #fff5f5;
+            border: 1px solid var(--error);
+            color: #742a2a;
+        }
+
+        .loading {
+            display: none;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .spinner {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 3px solid #f3f3f3;
+            border-top: 3px solid var(--primary);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .note {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            color: #856404;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            color: var(--primary);
+            text-decoration: none;
+            margin-bottom: 20px;
+            font-weight: 500;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        .back-link i {
+            margin-right: 8px;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .demo-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="container">
+            <h1>🚀 Live Demo</h1>
+            <p>Experience Bharat AI Hub's AI-powered modules in action</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <a href="/" class="back-link">
+            <i class="fas fa-arrow-left"></i>
+            Back to Home
+        </a>
+
+        <div class="note">
+            <strong>Note:</strong> This is a frontend demo showing the user interface. 
+            The actual AI features require AWS credentials and backend services. 
+            <a href="https://github.com/ArnabSen08/bharat-ai-hub/blob/master/QUICKSTART.md" target="_blank">
+                See setup guide
+            </a> to run the full application.
+        </div>
+
+        <div class="demo-grid">
+            <!-- Healthcare Demo -->
+            <div class="demo-card">
+                <h3>
+                    <i class="fas fa-stethoscope"></i>
+                    Healthcare Diagnosis
+                </h3>
+                <div class="demo-form">
+                    <div class="form-group">
+                        <label for="symptoms">Symptoms</label>
+                        <textarea id="symptoms" rows="3" placeholder="e.g., fever, cough, headache"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="age">Age</label>
+                        <input type="number" id="age" placeholder="30">
+                    </div>
+                    <div class="form-group">
+                        <label for="gender">Gender</label>
+                        <select id="gender">
+                            <option value="">Select gender</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <button class="btn" onclick="simulateHealthcareDiagnosis()">
+                        <i class="fas fa-brain"></i>
+                        Get AI Diagnosis
+                    </button>
+                </div>
+                <div class="loading" id="healthcare-loading">
+                    <div class="spinner"></div>
+                    <p>AI is analyzing symptoms...</p>
+                </div>
+                <div class="result" id="healthcare-result"></div>
+            </div>
+
+            <!-- Rural Demo -->
+            <div class="demo-card">
+                <h3>
+                    <i class="fas fa-seedling"></i>
+                    Crop Advisory
+                </h3>
+                <div class="demo-form">
+                    <div class="form-group">
+                        <label for="location">Location</label>
+                        <input type="text" id="location" placeholder="e.g., Punjab">
+                    </div>
+                    <div class="form-group">
+                        <label for="soil-type">Soil Type</label>
+                        <select id="soil-type">
+                            <option value="">Select soil type</option>
+                            <option value="loamy">Loamy</option>
+                            <option value="clay">Clay</option>
+                            <option value="sandy">Sandy</option>
+                            <option value="silt">Silt</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="season">Season</label>
+                        <select id="season">
+                            <option value="">Select season</option>
+                            <option value="kharif">Kharif</option>
+                            <option value="rabi">Rabi</option>
+                            <option value="zaid">Zaid</option>
+                        </select>
+                    </div>
+                    <button class="btn" onclick="simulateCropAdvisory()">
+                        <i class="fas fa-leaf"></i>
+                        Get Crop Advisory
+                    </button>
+                </div>
+                <div class="loading" id="rural-loading">
+                    <div class="spinner"></div>
+                    <p>AI is analyzing farm conditions...</p>
+                </div>
+                <div class="result" id="rural-result"></div>
+            </div>
+
+            <!-- Learning Demo -->
+            <div class="demo-card">
+                <h3>
+                    <i class="fas fa-graduation-cap"></i>
+                    AI Tutor
+                </h3>
+                <div class="demo-form">
+                    <div class="form-group">
+                        <label for="question">Ask a Question</label>
+                        <textarea id="question" rows="3" placeholder="e.g., Explain machine learning in simple terms"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <select id="subject">
+                            <option value="">Select subject</option>
+                            <option value="programming">Programming</option>
+                            <option value="mathematics">Mathematics</option>
+                            <option value="science">Science</option>
+                            <option value="general">General Knowledge</option>
+                        </select>
+                    </div>
+                    <button class="btn" onclick="simulateAITutor()">
+                        <i class="fas fa-robot"></i>
+                        Ask AI Tutor
+                    </button>
+                </div>
+                <div class="loading" id="learning-loading">
+                    <div class="spinner"></div>
+                    <p>AI tutor is thinking...</p>
+                </div>
+                <div class="result" id="learning-result"></div>
+            </div>
+
+            <!-- Content Demo -->
+            <div class="demo-card">
+                <h3>
+                    <i class="fas fa-language"></i>
+                    Content Translation
+                </h3>
+                <div class="demo-form">
+                    <div class="form-group">
+                        <label for="text-to-translate">Text to Translate</label>
+                        <textarea id="text-to-translate" rows="3" placeholder="Enter text in English"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="target-language">Target Language</label>
+                        <select id="target-language">
+                            <option value="">Select language</option>
+                            <option value="hi">Hindi (हिंदी)</option>
+                            <option value="bn">Bengali (বাংলা)</option>
+                            <option value="ta">Tamil (தமிழ்)</option>
+                            <option value="te">Telugu (తెలుగు)</option>
+                            <option value="mr">Marathi (मराठी)</option>
+                        </select>
+                    </div>
+                    <button class="btn" onclick="simulateTranslation()">
+                        <i class="fas fa-globe"></i>
+                        Translate Text
+                    </button>
+                </div>
+                <div class="loading" id="content-loading">
+                    <div class="spinner"></div>
+                    <p>AI is translating...</p>
+                </div>
+                <div class="result" id="content-result"></div>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 40px;">
+            <a href="https://github.com/ArnabSen08/bharat-ai-hub" class="btn" target="_blank">
+                <i class="fab fa-github"></i>
+                View Full Source Code
+            </a>
+        </div>
+    </div>
+
+    <script>
+        // Simulate Healthcare Diagnosis
+        function simulateHealthcareDiagnosis() {
+            const symptoms = document.getElementById('symptoms').value;
+            const age = document.getElementById('age').value;
+            const gender = document.getElementById('gender').value;
+            
+            if (!symptoms) {
+                showResult('healthcare', 'Please enter symptoms', 'error');
+                return;
+            }
+
+            showLoading('healthcare');
+            
+            setTimeout(() => {
+                const mockResponse = {
+                    possibleConditions: [
+                        { condition: "Viral Infection", probability: 0.75 },
+                        { condition: "Common Cold", probability: 0.60 }
+                    ],
+                    recommendedTests: ["Complete Blood Count", "Throat Swab"],
+                    generalAdvice: "Rest, stay hydrated, monitor temperature",
+                    urgency: "Low to Moderate"
+                };
+
+                const resultHtml = `
+                    <h4>AI Diagnosis Results:</h4>
+                    <p><strong>Possible Conditions:</strong></p>
+                    <ul>
+                        ${mockResponse.possibleConditions.map(c => 
+                            `<li>${c.condition} (${Math.round(c.probability * 100)}% probability)</li>`
+                        ).join('')}
+                    </ul>
+                    <p><strong>Recommended Tests:</strong> ${mockResponse.recommendedTests.join(', ')}</p>
+                    <p><strong>General Advice:</strong> ${mockResponse.generalAdvice}</p>
+                    <p><strong>Urgency:</strong> ${mockResponse.urgency}</p>
+                    <p><em>⚠️ This is a demo. Always consult healthcare professionals.</em></p>
+                `;
+
+                showResult('healthcare', resultHtml, 'success');
+            }, 2000);
+        }
+
+        // Simulate Crop Advisory
+        function simulateCropAdvisory() {
+            const location = document.getElementById('location').value;
+            const soilType = document.getElementById('soil-type').value;
+            const season = document.getElementById('season').value;
+            
+            if (!location || !soilType || !season) {
+                showResult('rural', 'Please fill all fields', 'error');
+                return;
+            }
+
+            showLoading('rural');
+            
+            setTimeout(() => {
+                const mockResponse = {
+                    recommendedCrops: ["Rice", "Wheat", "Sugarcane"],
+                    plantingTime: "June 15 - July 15",
+                    expectedYield: "4.5 tons/hectare",
+                    marketPrice: "₹2,500/quintal",
+                    fertilizers: ["NPK 10:26:26", "Urea"],
+                    irrigation: "Drip irrigation recommended"
+                };
+
+                const resultHtml = `
+                    <h4>Crop Advisory Results:</h4>
+                    <p><strong>Recommended Crops:</strong> ${mockResponse.recommendedCrops.join(', ')}</p>
+                    <p><strong>Planting Time:</strong> ${mockResponse.plantingTime}</p>
+                    <p><strong>Expected Yield:</strong> ${mockResponse.expectedYield}</p>
+                    <p><strong>Current Market Price:</strong> ${mockResponse.marketPrice}</p>
+                    <p><strong>Recommended Fertilizers:</strong> ${mockResponse.fertilizers.join(', ')}</p>
+                    <p><strong>Irrigation:</strong> ${mockResponse.irrigation}</p>
+                    <p><em>🌾 AI-powered recommendations based on your farm conditions</em></p>
+                `;
+
+                showResult('rural', resultHtml, 'success');
+            }, 2000);
+        }
+
+        // Simulate AI Tutor
+        function simulateAITutor() {
+            const question = document.getElementById('question').value;
+            const subject = document.getElementById('subject').value;
+            
+            if (!question) {
+                showResult('learning', 'Please enter a question', 'error');
+                return;
+            }
+
+            showLoading('learning');
+            
+            setTimeout(() => {
+                const mockResponse = `
+                    <h4>AI Tutor Response:</h4>
+                    <p>Great question! Based on your query about "${question.substring(0, 50)}...", here's a comprehensive explanation:</p>
+                    <p>Machine Learning is a subset of artificial intelligence that enables computers to learn and make decisions from data without being explicitly programmed for every scenario.</p>
+                    <p><strong>Key Concepts:</strong></p>
+                    <ul>
+                        <li>Algorithms learn patterns from data</li>
+                        <li>Models make predictions on new data</li>
+                        <li>Performance improves with more data</li>
+                    </ul>
+                    <p><strong>Related Topics:</strong> Neural Networks, Deep Learning, Data Science</p>
+                    <p><em>🤖 Would you like me to explain any specific aspect in more detail?</em></p>
+                `;
+
+                showResult('learning', mockResponse, 'success');
+            }, 2000);
+        }
+
+        // Simulate Translation
+        function simulateTranslation() {
+            const text = document.getElementById('text-to-translate').value;
+            const targetLang = document.getElementById('target-language').value;
+            
+            if (!text || !targetLang) {
+                showResult('content', 'Please enter text and select target language', 'error');
+                return;
+            }
+
+            showLoading('content');
+            
+            setTimeout(() => {
+                const translations = {
+                    'hi': 'नमस्ते! भारत AI हब में आपका स्वागत है।',
+                    'bn': 'নমস্কার! ভারত AI হাবে স্বাগতম।',
+                    'ta': 'வணக்கம்! பாரத் AI ஹப்பிற்கு வரவேற்கிறோம்।',
+                    'te': 'నమస్కారం! భారత్ AI హబ్‌కు స్వాగతం।',
+                    'mr': 'नमस्कार! भारत AI हबमध्ये आपले स्वागत आहे।'
+                };
+
+                const resultHtml = `
+                    <h4>Translation Result:</h4>
+                    <p><strong>Original Text:</strong> ${text}</p>
+                    <p><strong>Translated Text:</strong> ${translations[targetLang] || 'Translation would appear here'}</p>
+                    <p><strong>Target Language:</strong> ${document.getElementById('target-language').selectedOptions[0].text}</p>
+                    <p><em>🌐 Powered by Amazon Translate with cultural context awareness</em></p>
+                `;
+
+                showResult('content', resultHtml, 'success');
+            }, 1500);
+        }
+
+        // Helper functions
+        function showLoading(module) {
+            document.getElementById(`${module}-loading`).style.display = 'block';
+            document.getElementById(`${module}-result`).style.display = 'none';
+        }
+
+        function showResult(module, content, type) {
+            document.getElementById(`${module}-loading`).style.display = 'none';
+            const resultDiv = document.getElementById(`${module}-result`);
+            resultDiv.innerHTML = content;
+            resultDiv.className = `result ${type}`;
+            resultDiv.style.display = 'block';
+        }
+
+        // Console message
+        console.log('🚀 Bharat AI Hub Demo - Frontend Interface');
+        console.log('This demo shows the UI/UX. Full functionality requires backend setup.');
+        console.log('Repository: https://github.com/ArnabSen08/bharat-ai-hub');
+    </script>
+</body>
+</html>

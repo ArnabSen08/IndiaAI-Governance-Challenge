@@ -1,0 +1,1236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bharat AI Hub - Unified AI Platform for Social Impact</title>
+    <meta name="description" content="Revolutionary AI platform addressing healthcare, retail, rural, learning, content, and community challenges across India">
+    <meta name="keywords" content="AI, India, Healthcare, Agriculture, Education, AWS, Bedrock, Social Impact">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Bharat AI Hub - Unified AI Platform">
+    <meta property="og:description" content="Revolutionary AI platform for social impact across India">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://arnabsen08.github.io/bharat-ai-hub/">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🇮🇳</text></svg>">
+    
+    <style>
+        :root {
+            --primary: #667eea;
+            --primary-dark: #5a67d8;
+            --secondary: #764ba2;
+            --accent: #f093fb;
+            --success: #48bb78;
+            --warning: #ed8936;
+            --error: #f56565;
+            --dark: #1a202c;
+            --gray-50: #f7fafc;
+            --gray-100: #edf2f7;
+            --gray-200: #e2e8f0;
+            --gray-300: #cbd5e0;
+            --gray-400: #a0aec0;
+            --gray-500: #718096;
+            --gray-600: #4a5568;
+            --gray-700: #2d3748;
+            --gray-800: #1a202c;
+            --gray-900: #171923;
+            --white: #ffffff;
+            --shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 20px 40px rgba(0, 0, 0, 0.15);
+            --border-radius: 12px;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: var(--gray-800);
+            overflow-x: hidden;
+        }
+
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--gray-100);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--primary);
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--primary-dark);
+        }
+
+        /* Animated background */
+        .animated-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            opacity: 0.05;
+        }
+
+        .animated-bg::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23667eea' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            animation: float 20s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(180deg); }
+        }
+
+        /* Navigation */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--gray-200);
+            z-index: 1000;
+            transition: var(--transition);
+        }
+
+        .navbar.scrolled {
+            background: rgba(255, 255, 255, 0.98);
+            box-shadow: var(--shadow);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .logo i {
+            margin-right: 10px;
+            font-size: 1.8rem;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--gray-700);
+            font-weight: 500;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary);
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .mobile-menu {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .mobile-menu span {
+            width: 25px;
+            height: 3px;
+            background: var(--gray-700);
+            margin: 3px 0;
+            transition: var(--transition);
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 100px 20px 50px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill-opacity='0.1'%3E%3Cpolygon fill='%23ffffff' points='50 0 60 40 100 50 60 60 50 100 40 60 0 50 40 40'/%3E%3C/g%3E%3C/svg%3E");
+            animation: rotate 30s linear infinite;
+        }
+
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .hero-content {
+            max-width: 800px;
+            z-index: 2;
+            position: relative;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 800;
+            margin-bottom: 20px;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .hero .tagline {
+            font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+            margin-bottom: 30px;
+            opacity: 0.9;
+            animation: fadeInUp 1s ease-out 0.2s both;
+        }
+
+        .hero .description {
+            font-size: 1.1rem;
+            margin-bottom: 40px;
+            opacity: 0.8;
+            animation: fadeInUp 1s ease-out 0.4s both;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            animation: fadeInUp 1s ease-out 0.6s both;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            padding: 15px 30px;
+            border-radius: var(--border-radius);
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+            cursor: pointer;
+            border: none;
+            font-size: 1rem;
+        }
+
+        .btn-primary {
+            background: white;
+            color: var(--primary);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+        }
+
+        .btn i {
+            margin-right: 8px;
+        }
+
+        /* Stats Section */
+        .stats {
+            padding: 80px 20px;
+            background: var(--gray-50);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            text-align: center;
+        }
+
+        .stat-item {
+            background: white;
+            padding: 40px 20px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .stat-item:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--primary);
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 1.1rem;
+            color: var(--gray-600);
+            font-weight: 500;
+        }
+
+        /* Modules Section */
+        .modules {
+            padding: 100px 20px;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 80px;
+        }
+
+        .section-title {
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 700;
+            color: var(--gray-800);
+            margin-bottom: 20px;
+        }
+
+        .section-subtitle {
+            font-size: 1.2rem;
+            color: var(--gray-600);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .modules-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+
+        .module-card {
+            background: white;
+            border-radius: var(--border-radius);
+            padding: 40px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            cursor: pointer;
+            border: 2px solid transparent;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .module-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            transform: scaleX(0);
+            transition: var(--transition);
+        }
+
+        .module-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .module-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--primary);
+        }
+
+        .module-icon {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .module-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--gray-800);
+            margin-bottom: 15px;
+        }
+
+        .module-description {
+            color: var(--gray-600);
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .module-features {
+            list-style: none;
+        }
+
+        .module-features li {
+            padding: 8px 0;
+            color: var(--gray-700);
+            display: flex;
+            align-items: center;
+        }
+
+        .module-features li::before {
+            content: "✓";
+            color: var(--success);
+            font-weight: bold;
+            margin-right: 10px;
+            font-size: 1.1rem;
+        }
+
+        /* Technology Stack */
+        .tech-stack {
+            padding: 100px 20px;
+            background: var(--gray-50);
+        }
+
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-top: 60px;
+        }
+
+        .tech-category {
+            background: white;
+            padding: 30px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            text-align: center;
+            transition: var(--transition);
+        }
+
+        .tech-category:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .tech-category h3 {
+            color: var(--primary);
+            margin-bottom: 20px;
+            font-size: 1.3rem;
+        }
+
+        .tech-list {
+            list-style: none;
+        }
+
+        .tech-list li {
+            padding: 5px 0;
+            color: var(--gray-700);
+            font-size: 0.95rem;
+        }
+
+        /* Problem Statements */
+        .problems {
+            padding: 100px 20px;
+        }
+
+        .problems-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 60px;
+        }
+
+        .problem-card {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 40px;
+            border-radius: var(--border-radius);
+            transition: var(--transition);
+        }
+
+        .problem-card:hover {
+            transform: translateY(-5px) scale(1.02);
+        }
+
+        .problem-track {
+            font-size: 0.9rem;
+            opacity: 0.8;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .problem-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .problem-description {
+            opacity: 0.9;
+            line-height: 1.6;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            padding: 100px 20px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            text-align: center;
+        }
+
+        .cta-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .cta-section h2 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            margin-bottom: 20px;
+        }
+
+        .cta-section p {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            opacity: 0.9;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--gray-900);
+            color: white;
+            padding: 60px 20px 30px;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 20px;
+            color: var(--primary);
+        }
+
+        .footer-section p,
+        .footer-section a {
+            color: var(--gray-300);
+            text-decoration: none;
+            line-height: 1.8;
+        }
+
+        .footer-section a:hover {
+            color: white;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: var(--primary);
+            border-radius: 50%;
+            transition: var(--transition);
+        }
+
+        .social-links a:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 1px solid var(--gray-700);
+            color: var(--gray-400);
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in-up {
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        /* Scroll animations */
+        .scroll-animate {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+
+        .scroll-animate.animate {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-menu {
+                display: flex;
+            }
+
+            .hero {
+                padding: 120px 20px 50px;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .btn {
+                width: 100%;
+                max-width: 300px;
+                justify-content: center;
+            }
+
+            .modules-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .problems-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Loading animation */
+        .loading {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease-out;
+        }
+
+        .loading.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .spinner {
+            width: 50px;
+            height: 50px;
+            border: 4px solid var(--gray-200);
+            border-top: 4px solid var(--primary);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading" id="loading">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Animated Background -->
+    <div class="animated-bg"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <i class="fas fa-brain"></i>
+                Bharat AI Hub
+            </a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#modules">Modules</a></li>
+                <li><a href="#tech">Technology</a></li>
+                <li><a href="#problems">Solutions</a></li>
+                <li><a href="demo.html">Demo</a></li>
+                <li><a href="https://github.com/ArnabSen08/bharat-ai-hub" target="_blank">GitHub</a></li>
+            </ul>
+            <div class="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>🇮🇳 Bharat AI Hub</h1>
+            <p class="tagline">Unified AI Platform for Social Impact</p>
+            <p class="description">
+                Revolutionary AI-powered solution addressing healthcare, retail, rural development, 
+                education, content creation, and community services across India through a single, 
+                integrated platform.
+            </p>
+            <div class="cta-buttons">
+                <a href="https://github.com/ArnabSen08/bharat-ai-hub" class="btn btn-primary" target="_blank">
+                    <i class="fab fa-github"></i>
+                    Explore Code
+                </a>
+                <a href="demo.html" class="btn btn-secondary">
+                    <i class="fas fa-play"></i>
+                    Try Live Demo
+                </a>
+                <a href="#modules" class="btn btn-secondary">
+                    <i class="fas fa-rocket"></i>
+                    Discover Modules
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item scroll-animate">
+                    <span class="stat-number">6</span>
+                    <div class="stat-label">AI-Powered Modules</div>
+                </div>
+                <div class="stat-item scroll-animate">
+                    <span class="stat-number">12+</span>
+                    <div class="stat-label">AWS Services</div>
+                </div>
+                <div class="stat-item scroll-animate">
+                    <span class="stat-number">22+</span>
+                    <div class="stat-label">Indian Languages</div>
+                </div>
+                <div class="stat-item scroll-animate">
+                    <span class="stat-number">100%</span>
+                    <div class="stat-label">Problem Coverage</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modules Section -->
+    <section class="modules" id="modules">
+        <div class="container">
+            <div class="section-header scroll-animate">
+                <h2 class="section-title">AI-Powered Modules</h2>
+                <p class="section-subtitle">
+                    Six comprehensive modules addressing critical challenges across India, 
+                    powered by cutting-edge AWS AI services.
+                </p>
+            </div>
+            
+            <div class="modules-grid">
+                <div class="module-card scroll-animate">
+                    <span class="module-icon">🏥</span>
+                    <h3 class="module-title">Healthcare Intelligence</h3>
+                    <p class="module-description">
+                        AI-powered healthcare solutions for better diagnosis, telemedicine, and accessibility.
+                    </p>
+                    <ul class="module-features">
+                        <li>AI Diagnosis Assistant with 85%+ accuracy</li>
+                        <li>Prescription OCR using Amazon Textract</li>
+                        <li>Telemedicine platform with AI triage</li>
+                        <li>Multi-language health information</li>
+                    </ul>
+                </div>
+
+                <div class="module-card scroll-animate">
+                    <span class="module-icon">🛒</span>
+                    <h3 class="module-title">Smart Retail & Commerce</h3>
+                    <p class="module-description">
+                        Intelligent retail solutions for demand forecasting and supply chain optimization.
+                    </p>
+                    <ul class="module-features">
+                        <li>Demand forecasting with SageMaker</li>
+                        <li>Dynamic pricing optimization</li>
+                        <li>Customer behavior analytics</li>
+                        <li>Voice commerce in regional languages</li>
+                    </ul>
+                </div>
+
+                <div class="module-card scroll-animate">
+                    <span class="module-icon">🌾</span>
+                    <h3 class="module-title">Rural Empowerment</h3>
+                    <p class="module-description">
+                        Empowering farmers with AI-driven agricultural insights and market connections.
+                    </p>
+                    <ul class="module-features">
+                        <li>Crop advisory with AI recommendations</li>
+                        <li>Disease detection using computer vision</li>
+                        <li>Market linkage platform</li>
+                        <li>Weather and soil analytics</li>
+                    </ul>
+                </div>
+
+                <div class="module-card scroll-animate">
+                    <span class="module-icon">📚</span>
+                    <h3 class="module-title">Learning Hub</h3>
+                    <p class="module-description">
+                        Personalized learning experiences powered by AI for students and professionals.
+                    </p>
+                    <ul class="module-features">
+                        <li>Adaptive learning paths</li>
+                        <li>AI tutor available 24/7</li>
+                        <li>Code assistant for developers</li>
+                        <li>Skill gap analysis and guidance</li>
+                    </ul>
+                </div>
+
+                <div class="module-card scroll-animate">
+                    <span class="module-icon">🎬</span>
+                    <h3 class="module-title">Content Intelligence</h3>
+                    <p class="module-description">
+                        AI-powered content creation, translation, and management for digital experiences.
+                    </p>
+                    <ul class="module-features">
+                        <li>Automated content generation</li>
+                        <li>22+ language translation</li>
+                        <li>AI-powered content moderation</li>
+                        <li>Video analytics and accessibility</li>
+                    </ul>
+                </div>
+
+                <div class="module-card scroll-animate">
+                    <span class="module-icon">🤝</span>
+                    <h3 class="module-title">Community Connect</h3>
+                    <p class="module-description">
+                        Connecting communities with government services and emergency response systems.
+                    </p>
+                    <ul class="module-features">
+                        <li>Government services portal</li>
+                        <li>AI-powered grievance routing</li>
+                        <li>Real-time emergency response</li>
+                        <li>Community resource mapping</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technology Stack -->
+    <section class="tech-stack" id="tech">
+        <div class="container">
+            <div class="section-header scroll-animate">
+                <h2 class="section-title">Powered by AWS AI</h2>
+                <p class="section-subtitle">
+                    Built on cutting-edge AWS AI/ML services for scalability, reliability, and performance.
+                </p>
+            </div>
+            
+            <div class="tech-grid">
+                <div class="tech-category scroll-animate">
+                    <h3><i class="fas fa-brain"></i> AI/ML Services</h3>
+                    <ul class="tech-list">
+                        <li>Amazon Bedrock</li>
+                        <li>Amazon SageMaker</li>
+                        <li>Comprehend Medical</li>
+                        <li>Amazon Textract</li>
+                        <li>Amazon Rekognition</li>
+                        <li>Amazon Translate</li>
+                    </ul>
+                </div>
+
+                <div class="tech-category scroll-animate">
+                    <h3><i class="fas fa-server"></i> Infrastructure</h3>
+                    <ul class="tech-list">
+                        <li>AWS Lambda</li>
+                        <li>Amazon ECS/EKS</li>
+                        <li>API Gateway</li>
+                        <li>Amazon RDS</li>
+                        <li>DynamoDB</li>
+                        <li>Amazon S3</li>
+                    </ul>
+                </div>
+
+                <div class="tech-category scroll-animate">
+                    <h3><i class="fas fa-code"></i> Development</h3>
+                    <ul class="tech-list">
+                        <li>Node.js & Express</li>
+                        <li>React & Next.js</li>
+                        <li>TypeScript</li>
+                        <li>PostgreSQL</li>
+                        <li>Redis</li>
+                        <li>Docker</li>
+                    </ul>
+                </div>
+
+                <div class="tech-category scroll-animate">
+                    <h3><i class="fas fa-shield-alt"></i> Security</h3>
+                    <ul class="tech-list">
+                        <li>AWS IAM</li>
+                        <li>AWS KMS</li>
+                        <li>Amazon Cognito</li>
+                        <li>AWS WAF</li>
+                        <li>CloudWatch</li>
+                        <li>X-Ray Tracing</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Statements -->
+    <section class="problems" id="problems">
+        <div class="container">
+            <div class="section-header scroll-animate">
+                <h2 class="section-title">Complete Solution Coverage</h2>
+                <p class="section-subtitle">
+                    Addressing all 6 problem statements from the AWS AI for Bharat Hackathon 
+                    through a unified, integrated platform.
+                </p>
+            </div>
+            
+            <div class="problems-grid">
+                <div class="problem-card scroll-animate">
+                    <div class="problem-track">Professional Track</div>
+                    <h3 class="problem-title">AI for Retail, Commerce & Market Intelligence</h3>
+                    <p class="problem-description">
+                        Smart retail solutions with demand forecasting, dynamic pricing, 
+                        and supply chain optimization.
+                    </p>
+                </div>
+
+                <div class="problem-card scroll-animate">
+                    <div class="problem-track">Professional Track</div>
+                    <h3 class="problem-title">AI for Healthcare & Life Sciences</h3>
+                    <p class="problem-description">
+                        Healthcare intelligence with AI diagnosis, telemedicine, 
+                        and medical record management.
+                    </p>
+                </div>
+
+                <div class="problem-card scroll-animate">
+                    <div class="problem-track">Professional Track</div>
+                    <h3 class="problem-title">AI for Rural Innovation & Sustainable Systems</h3>
+                    <p class="problem-description">
+                        Rural empowerment through crop advisory, disease detection, 
+                        and market linkage platforms.
+                    </p>
+                </div>
+
+                <div class="problem-card scroll-animate">
+                    <div class="problem-track">Student Track</div>
+                    <h3 class="problem-title">AI for Learning & Developer Productivity</h3>
+                    <p class="problem-description">
+                        Personalized learning hub with AI tutoring, code assistance, 
+                        and skill development.
+                    </p>
+                </div>
+
+                <div class="problem-card scroll-animate">
+                    <div class="problem-track">Student Track</div>
+                    <h3 class="problem-title">AI for Media, Content & Digital Experiences</h3>
+                    <p class="problem-description">
+                        Content intelligence with automated generation, translation, 
+                        and moderation capabilities.
+                    </p>
+                </div>
+
+                <div class="problem-card scroll-animate">
+                    <div class="problem-track">Student Track</div>
+                    <h3 class="problem-title">AI for Communities, Access & Public Impact</h3>
+                    <p class="problem-description">
+                        Community connect platform for government services, 
+                        grievance resolution, and emergency response.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content scroll-animate">
+                <h2>Ready to Transform India with AI?</h2>
+                <p>
+                    Explore the complete source code, documentation, and deployment guides. 
+                    Join us in building the future of AI for social impact.
+                </p>
+                <div class="cta-buttons">
+                    <a href="https://github.com/ArnabSen08/bharat-ai-hub" class="btn btn-primary" target="_blank">
+                        <i class="fab fa-github"></i>
+                        View on GitHub
+                    </a>
+                    <a href="https://github.com/ArnabSen08/bharat-ai-hub/blob/master/QUICKSTART.md" class="btn btn-secondary" target="_blank">
+                        <i class="fas fa-rocket"></i>
+                        Quick Start Guide
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Bharat AI Hub</h3>
+                    <p>
+                        A unified AI platform addressing critical challenges across healthcare, 
+                        agriculture, education, retail, content, and community services in India.
+                    </p>
+                    <div class="social-links">
+                        <a href="https://github.com/ArnabSen08/bharat-ai-hub" target="_blank">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="mailto:beanclarksum@gmail.com">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <p><a href="https://github.com/ArnabSen08/bharat-ai-hub/blob/master/README.md" target="_blank">Documentation</a></p>
+                    <p><a href="https://github.com/ArnabSen08/bharat-ai-hub/blob/master/QUICKSTART.md" target="_blank">Quick Start</a></p>
+                    <p><a href="https://github.com/ArnabSen08/bharat-ai-hub/blob/master/docs/API_REFERENCE.md" target="_blank">API Reference</a></p>
+                    <p><a href="https://github.com/ArnabSen08/bharat-ai-hub/blob/master/CONTRIBUTING.md" target="_blank">Contributing</a></p>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Technology</h3>
+                    <p>AWS AI Services</p>
+                    <p>Amazon Bedrock</p>
+                    <p>Node.js & React</p>
+                    <p>Docker & Kubernetes</p>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p>Arnab Sen</p>
+                    <p><a href="mailto:beanclarksum@gmail.com">beanclarksum@gmail.com</a></p>
+                    <p><a href="https://github.com/ArnabSen08" target="_blank">@ArnabSen08</a></p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 Bharat AI Hub. Built with ❤️ for India's Digital Future.</p>
+                <p>AWS AI for Bharat Hackathon 2026</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Loading screen
+        window.addEventListener('load', function() {
+            const loading = document.getElementById('loading');
+            setTimeout(() => {
+                loading.classList.add('hidden');
+            }, 1000);
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.scroll-animate').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Counter animation for stats
+        function animateCounter(element, target) {
+            let current = 0;
+            const increment = target / 100;
+            const timer = setInterval(() => {
+                current += increment;
+                if (current >= target) {
+                    current = target;
+                    clearInterval(timer);
+                }
+                element.textContent = Math.floor(current) + (target > 100 ? '+' : '');
+            }, 20);
+        }
+
+        // Animate counters when they come into view
+        const statsObserver = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const number = entry.target.querySelector('.stat-number');
+                    const target = parseInt(number.textContent);
+                    animateCounter(number, target);
+                    statsObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        document.querySelectorAll('.stat-item').forEach(item => {
+            statsObserver.observe(item);
+        });
+
+        // Mobile menu toggle (if needed)
+        const mobileMenu = document.querySelector('.mobile-menu');
+        const navLinks = document.querySelector('.nav-links');
+
+        mobileMenu.addEventListener('click', function() {
+            navLinks.classList.toggle('active');
+        });
+
+        // Add some interactive effects
+        document.querySelectorAll('.module-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-10px) scale(1.02)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0) scale(1)';
+            });
+        });
+
+        // Console message
+        console.log(`
+🇮🇳 Bharat AI Hub - Unified AI Platform for Social Impact
+Repository: https://github.com/ArnabSen08/bharat-ai-hub
+Built with ❤️ for India's Digital Future
+
+Features:
+✅ 6 AI-Powered Modules
+✅ 12+ AWS Services
+✅ 22+ Indian Languages
+✅ Production-Ready Architecture
+✅ Complete Documentation
+
+AWS AI for Bharat Hackathon 2026
+        `);
+    </script>
+</body>
+</html>
