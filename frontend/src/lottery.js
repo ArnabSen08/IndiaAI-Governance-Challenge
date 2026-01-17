@@ -1,6 +1,8 @@
 import web3 from "./web3";
 
-const address = "0x09c86dEA7BFd08084902AC0077C220032DA4720B";
+// TODO: Replace this address with your deployed contract address
+const address = "YOUR_DEPLOYED_CONTRACT_ADDRESS_HERE";
+
 const abi = [
   { inputs: [], stateMutability: "nonpayable", type: "constructor" },
   {
@@ -41,4 +43,5 @@ const abi = [
     type: "function",
   },
 ];
+
 export default new web3.eth.Contract(abi, address);
