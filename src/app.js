@@ -34,6 +34,8 @@ app.get('/health', (req, res) => {
 // API Routes
 app.use('/api/healthcare', require('./api/healthcare/diagnosis.api'));
 app.use('/api/rural', require('./api/rural/crop-advisory.api'));
+app.use('/api/retail', require('./api/retail/retail.api'));
+app.use('/api/content', require('./api/content/content.api'));
 // Add more routes as modules are created
 
 // Root endpoint

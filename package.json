@@ -4,11 +4,13 @@
   "description": "Unified AI Platform for Social Impact - AWS AI for Bharat Hackathon",
   "main": "index.js",
   "scripts": {
-    "dev": "next dev",
+    "dev": "node src/app.js",
     "build": "next build",
-    "start": "next start",
+    "start": "node src/app.js",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "test": "jest",
+    "test:retail": "node scripts/test-retail-api.js",
+    "test:retail:performance": "node scripts/test-retail-api.js performance",
     "migrate": "node scripts/migrate.js",
     "seed": "node scripts/seed.js",
     "deploy": "npm run build && cdk deploy"
@@ -55,6 +57,7 @@
     "typescript": "^5.3.0",
     "eslint": "^8.55.0",
     "jest": "^29.7.0",
+    "supertest": "^6.3.3",
     "aws-cdk": "^2.115.0",
     "aws-cdk-lib": "^2.115.0"
   }
