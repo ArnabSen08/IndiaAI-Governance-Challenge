@@ -42,9 +42,14 @@ jobs:
 
     - name: Copy docs to build
       run: |
+        # Create app directory for React app
+        mkdir -p frontend/dist/app
+        cp frontend/dist/index.html frontend/dist/app/
+        cp -r frontend/dist/assets frontend/dist/app/
+        # Copy docs
         mkdir -p frontend/dist/docs
         cp -r docs/* frontend/dist/docs/
-        # Also copy the main landing page to root
+        # Copy the main landing page to root
         cp docs/index.html frontend/dist/
 
     - name: Setup Pages

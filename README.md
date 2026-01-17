@@ -44,7 +44,7 @@ blockchain-lottery-dapp/
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/blockchain-lottery-dapp.git
+git clone https://github.com/ArnabSen08/blockchain-lottery-dapp.git
 cd blockchain-lottery-dapp
 ```
 
@@ -123,7 +123,7 @@ INFURA_URL="your_infura_sepolia_url"
 
 ## 🌐 Live Demo
 
-Visit the live application: [https://yourusername.github.io/blockchain-lottery-dapp](https://yourusername.github.io/blockchain-lottery-dapp)
+Visit the live application: [https://arnabsen08.github.io/blockchain-lottery-dapp](https://arnabsen08.github.io/blockchain-lottery-dapp)
 
 ## 🤝 Contributing
 
