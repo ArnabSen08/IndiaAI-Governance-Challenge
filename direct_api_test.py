@@ -17,8 +17,8 @@ def test_direct_api():
         print("❌ No API key found")
         return False
     
-    # Try the direct REST API approach
-    url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key={api_key}"
+    # Try the direct REST API approach with Gemini 3 Flash Preview
+    url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-3-flash-preview:generateContent?key={api_key}"
     
     headers = {
         'Content-Type': 'application/json',
