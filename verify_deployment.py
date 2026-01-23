@@ -99,11 +99,11 @@ def check_configuration():
         print("   ✅ Configuration initialization")
         
         # Test environment file
-        env_sample = Path(".env.sample")
-        if env_sample.exists():
-            print("   ✅ .env.sample exists")
+        env_example = Path(".env.example")
+        if env_example.exists():
+            print("   ✅ .env.example exists")
         else:
-            print("   ❌ .env.sample missing")
+            print("   ❌ .env.example missing")
             return False
         
         # Test log directory creation
@@ -223,7 +223,7 @@ def check_project_structure():
         "docs/",
         "app.py",
         "requirements.txt",
-        ".env.sample"
+        ".env.example"
     ]
     
     for item in required_structure:
@@ -284,7 +284,7 @@ def main():
         print("\n🎉 SYSTEM READY FOR DEPLOYMENT!")
         print("\nDeployment Instructions:")
         print("1. Set your OpenAI API key in .env file:")
-        print("   cp .env.sample .env")
+        print("   cp .env.example .env")
         print("   # Edit .env and set OPENAI_API_KEY=your_actual_key")
         print("\n2. Start the application:")
         print("   streamlit run app.py")
