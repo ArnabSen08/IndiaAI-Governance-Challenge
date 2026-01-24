@@ -18,6 +18,58 @@ This project is the capstone deliverable for the **Agentic AI Essentials Certifi
 ✅ Custom document knowledge base  
 ✅ Question-answering interface  
 ✅ Example queries and demonstrations  
+✅ Professional demo videos (3 videos included)  
+
+## Demo Videos
+
+Watch our project in action:
+
+### RAG System Demo (3 min)
+Introductory demo showcasing key features and performance metrics.
+
+<a href="https://github.com/ArnabSen08/ready-tensor/raw/master/supplementary_materials/videos/rag-demo.mp4" target="_blank">
+  <img src="https://img.shields.io/badge/Watch%20Video-rag--demo-blue?style=for-the-badge&logo=youtube" alt="RAG Demo Video"/>
+</a>
+
+**Key Highlights:**
+- System overview and capabilities
+- 94% retrieval success rate
+- 89% answer accuracy
+- 1.2s average latency
+
+---
+
+### Architecture Walkthrough (5 min)
+Technical deep-dive into the RAG system architecture and pipeline.
+
+<a href="https://github.com/ArnabSen08/ready-tensor/raw/master/supplementary_materials/videos/architecture-walkthrough.mp4" target="_blank">
+  <img src="https://img.shields.io/badge/Watch%20Video-architecture--walkthrough-green?style=for-the-badge&logo=youtube" alt="Architecture Video"/>
+</a>
+
+**Covers:**
+- System components and data flow
+- Query processing pipeline
+- Embedding generation
+- Vector search and retrieval
+- LLM response generation
+
+---
+
+### Deployment Guide (4 min)
+Step-by-step guide for deploying the RAG system to production.
+
+<a href="https://github.com/ArnabSen08/ready-tensor/raw/master/supplementary_materials/videos/deployment-guide.mp4" target="_blank">
+  <img src="https://img.shields.io/badge/Watch%20Video-deployment--guide-orange?style=for-the-badge&logo=youtube" alt="Deployment Video"/>
+</a>
+
+**Topics:**
+- Local Docker deployment
+- Cloud deployment options (AWS, Google Cloud, Azure)
+- Configuration and setup
+- Security best practices
+- Production checklist
+
+---
 
 ## Getting Started
 
@@ -69,6 +121,16 @@ ready-tensor/
 - [Architecture](./docs/architecture.md)
 - [Setup Guide](./docs/setup.md)
 - [Example Queries](./docs/examples.md)
+- [Supplementary Materials](./supplementary_materials/INDEX.md) - Benchmarks, FAQ, Quick Reference, and more
+- [Performance Benchmarks](./supplementary_materials/BENCHMARKS.md)
+- [Deployment Guide](./supplementary_materials/DEPLOYMENT.md)
+
+## Video Resources
+
+All demo videos are available in [supplementary_materials/videos/](./supplementary_materials/videos/):
+- `rag-demo.mp4` - System overview and key metrics (693 KB)
+- `architecture-walkthrough.mp4` - Technical architecture deep-dive (611 KB)
+- `deployment-guide.mp4` - Production deployment tutorial (698 KB)
 
 ## License
 
