@@ -1,0 +1,521 @@
+Ready Tensor logo
+Home
+Publications
+Certifications
+Competitions
+Contributors
+
+Light
+
+Start publication
+arnab121
+Ready Tensor logo
+Start publication
+Home
+Publications
+Certifications
+Competitions
+Contributors
+Back to lessons
+May 17, 2025
+●
+13,317 reads
+●
+Creative Commons Attribution-NonCommercial (CC BY-NC)
+Capstone Project Requirements: Build Your RAG-Based AI Assistant
+Agentic AI
+Certification Program
+Chatbot
+Document Assistant
+LangChain
+Project Requirements
+Prompt Engineering
+Question-Answering
+RAG
+Vector Databases
+ready-tensor
+Ready Tensor
+3rdson
+Victory Nnaji
+Like
+Bookmark
+Share
+AAIE-U4L1 Capstone Project Requirements.webp
+
+🏠 Home - All Lessons
+
+➡️ Next - RAG-Based AI Assistant Template
+
+This project is the primary deliverable for the Agentic AI Essentials Certification Program and is required to earn the Certificate of Completion.
+
+It brings together everything you’ve learned by having you build a working RAG-based assistant that retrieves answers from a custom knowledge base - serving as the capstone experience for the program.
+
+Project Objectives
+In this project, you’ll build a simple question-answering assistant that pulls answers from a custom document set using RAG (Retrieval-Augmented Generation).
+
+You’ll use LangChain and a vector store like FAISS or Chroma (or their alternatives) to connect a prompt → retriever → response flow.
+
+🛠️ What You’ll Build
+You’ll build a simple RAG-powered assistant that answers questions based on a custom document set. Here’s what’s expected:
+
+A LangChain-based pipeline that connects:
+Prompt formulation
+Vector store retrieval (e.g., FAISS, Chroma, or alternatives)
+LLM-generated response
+Document ingestion into the vector store
+Basic UX for interaction (CLI, notebook, or minimal UI)
+Run a few example queries to test retrieval and response quality
+Optional enhancements:
+
+Add session-based memory or intermediate reasoning steps (e.g., ReAct or CoT-style chaining)
+Include basic logging or observability if you’d like to go further
+▶️ Watch the Walkthrough
+Here’s a quick video outlining the project requirements and showing an example of what you’ll build:
+
+
+💡 Example Use Cases & Datasets
+Not sure what to build your assistant for? Here are a few project ideas to spark inspiration:
+
+📄 Ready Tensor Publication Explorer
+Build a conversational assistant that helps users explore the contents of Ready Tensor publications by asking natural language questions.
+
+Use a sample of 20-50 diverse publications from the platform as your knowledge base. You can find a dataset of a sample of our publications on 
+Google Drive here
+.
+
+If you scrape or copy/paste publications from the Ready Tensor platform yourself, make sure to check the license for each one to ensure the author has granted permission for reuse.
+
+Build a chatbot that can answer questions from readers such as:
+
+What’s this publication about?
+What models or tools were used?
+Any limitations or assumptions?
+We’ll demo a working version of this (see video above) - a conversational bot that helps users explore any publication on the platform.
+
+📚 LangChain or LangGraph Docs Bot
+Build a technical assistant that can answer developer questions using content from the LangChain or LangGraph documentation.
+
+Select and ingest a focused portion of the docs (don’t overload it — 20-50 pages is enough). Your bot should be able to respond to questions like:
+
+How do I define a custom agent?
+What’s the role of memory in LangGraph?
+🌍 Topic-Specific Wikipedia Bot
+Pull a collection of pages particular to a topic (such as python, LLMs, or deep learning), embed them into a vector store, and build a bot that can answer user questions as if it were an expert on that subject.
+
+If you’re scraping or downloading content, make sure you comply with Wikipedia’s content usage policies and only use a small, well-scoped dataset.
+
+🧭 You're Not Limited to These!
+These are just a few starting points. Feel free to explore any use case that interests you. Just make sure you have the right to use the data you choose, and respect any licenses or usage restrictions that come with it.
+
+Agentic AI Essentials project is evaluated in the review cycle for the month in which they are submitted.
+To be included in that month’s review, send in your project no later than one of these dates :
+
+January 2, 2026, at 11:59 PM (UTC)
+February 6, 2026, at 11:59 PM (UTC)
+March 6, 2026, at 11:59 PM (UTC)
+April 3, 2026, at 11:59 PM (UTC)
+May 1, 2026, at 11:59 PM (UTC)
+If you don’t meet a listed deadline, you can still submit before the next month’s date to be considered in that cycle.
+
+The review process usually takes up to 2 weeks after the deadline, which includes receiving reviewer feedback and making any necessary updates.
+
+✅ Submission Checklist
+To complete this project, you need to submit two deliverables:
+
+1. 📝 Project Publication
+Create a short publication on the Ready Tensor platform that:
+
+Describes your project, what it does, and how it works
+Follows best practices from our Technical Evaluation Rubric for the
+Tool / App / Software Development category
+Meets at least 70% of the listed criteria
+📄 
+Publication: Technical Evaluation Rubric
+
+Check the document titled Publication Evaluation Criteria Reference Guide.pdf uploaded in this publication above.
+
+Note: This rubric is general-purpose. You still need to follow the project-specific expectations described above (e.g. use of retrieval, optional memory/tool extensions, etc.)
+
+2. 🗂️ Project GitHub Repository
+Submit a repo that:
+
+Contains clean, working code for your RAG-based assistant
+Includes setup instructions, sample inputs, and outputs
+Meets the “Essential” level of our repo evaluation rubric
+Satisfies at least 70% of the Essential criteria
+📄 
+Repository Evaluation Rubric
+
+🏠 Home - All Lessons
+
+➡️ Next - RAG-Based AI Assistant Template
+
+Table of contents
+
+Project Context
+
+
+Project Objectives
+
+
+🛠️ What You’ll Build
+
+
+▶️ Watch the Walkthrough
+
+
+💡 Example Use Cases & Datasets
+
+
+📄 Ready Tensor Publication Explorer
+
+
+📚 LangChain or LangGraph Docs Bot
+
+
+🌍 Topic-Specific Wikipedia Bot
+
+
+🧭 You're Not Limited to These!
+
+
+✅ Submission Checklist
+
+Files
+project_1_publications.json
+About
+Docs
+Privacy
+Copyright
+Contact
+Support
+© Ready Tensor, Inc.
+
+Ready Tensor logo
+Home
+Publications
+Certifications
+Competitions
+Contributors
+
+Light
+
+Start publication
+arnab121
+Ready Tensor logo
+Start publication
+Home
+Publications
+Certifications
+Competitions
+Contributors
+Back to lessons
+Oct 07, 2025
+●
+722 reads
+●
+Creative Commons Attribution-NonCommercial-ShareAlike (CC BY-NC-SA)
+RAG-Based AI Assistant Template: Starter Kit for Your Capstone Project
+mo.abdelhamid
+Mohamed Abdelhamid
+ready-tensor
+Ready Tensor
+Like
+Bookmark
+Share
+AAIE-U4L2 RAG-Based AI Assistant Template.webp
+
+🏠 Home - All Lessons
+
+⬅️ Previous - Capstone Project Requirements
+
+➡️ Next - Capstone Project Submission Guidelines
+
+TL;DR
+This is your major project in the Agentic AI Essentials certification program. You’ll be building a Retrieval-Augmented Generation (RAG) assistant — an AI that can answer questions about your own documents.
+
+To make the starting point less intimidating, we’ve prepared a project template, i.e., GitHub repo with scaffolded code, and a video walkthrough that shows you exactly how to complete it. Your job is to fill in a handful of missing functions that bring the system to life.
+
+By the end, you’ll have a working Q&A assistant — think ChatGPT, but grounded in your knowledge base.
+
+Resources for Reference
+Project Template Repository
+
+📹 Lesson Video: Embedded Below
+
+Why We’re Giving You a Template
+Starting a big project from scratch can feel overwhelming. To help you past that “where do I begin?” moment, we’ve provided a ready-to-use template.
+
+The template isn’t a complete project — instead, it gives you:
+
+A clear project structure with app.py, vectordb.py, and a data/ folder
+Vector database integration (ChromaDB by default)
+Multi-LLM support (OpenAI, Groq, or Google)
+Sentence Transformers for embeddings
+All the heavy lifting is in place. What’s missing are the core functions you’ll implement to make the assistant work.
+
+What You’ll Build
+Your task is to complete the system by adding the logic for:
+
+Loading your own documents
+Splitting them into chunks for search
+Creating embeddings and storing them in the vector database
+Searching for relevant chunks when a user asks a question
+Designing a prompt template that combines context with the user’s query
+Connecting it all into a query pipeline that produces an answer
+In other words: the template gives you the skeleton, and you’ll add the muscles and movement.
+
+🎥 Video Walkthrough: Implementing Your RAG Assistant
+
+In this video, we guide you through the project template and show you exactly how to bring it to life. You’ll see how to:
+
+Set up your environment and API keys
+Add your own documents to the data/ directory
+Implement the missing functions in app.py and vectordb.py
+Choose chunking strategies and embedding models
+Run queries and test your assistant end to end
+
+What You’ll Build
+By completing the template, you’ll have an AI assistant that can:
+
+Load and process your own documents
+Break them into chunks for semantic search
+Store and retrieve them from a vector database
+Use an LLM to generate contextual answers
+What’s Already Done for You
+The template handles:
+
+Multi-LLM support (OpenAI, Groq, Google)
+ChromaDB integration, ready out of the box
+Sentence Transformers embeddings
+Clean structure and environment setup
+All the infrastructure is ready. You just add the core logic.
+
+Success Criteria
+You’ve completed the project when:
+
+You can add your own documents to the data/ folder
+The system loads, chunks, embeds, and stores them
+Queries return relevant results
+The assistant generates meaningful, contextual answers
+You can switch between LLM providers via environment variables
+Ready to Start?
+Clone the repo, watch the walkthrough, and implement one function at a time. Test as you go — and remember, the template is here to help you overcome the blank-page problem.
+
+This is your first step toward building real agentic systems. Have fun with it! 🚀
+
+🏠 Home - All Lessons
+
+⬅️ Previous - Capstone Project Requirements
+
+➡️ Next - Capstone Project Submission Guidelines
+
+Table of contents
+
+TL;DR
+
+
+Why We’re Giving You a Template
+
+
+What You’ll Build
+
+
+What You’ll Build
+
+
+What’s Already Done for You
+
+
+Success Criteria
+
+
+Ready to Start?
+
+About
+Docs
+Privacy
+Copyright
+Contact
+Support
+© Ready Tensor, Inc.
+
+Ready Tensor logo
+Home
+Publications
+Certifications
+Competitions
+Contributors
+
+Light
+
+Start publication
+arnab121
+Ready Tensor logo
+Start publication
+Home
+Publications
+Certifications
+Competitions
+Contributors
+Back to lessons
+Jun 04, 2025
+●
+1,367 reads
+●
+Creative Commons Attribution-NonCommercial-ShareAlike (CC BY-NC-SA)
+Project Submission Guidelines: Agentic AI Essentials Certification
+Capstone Project
+Certification Requirements
+Checklist
+Project Guidelines
+Submission Guidelines
+ready-tensor
+Ready Tensor
+rahul.parajuli27
+Rahul Parajuli
+Like
+Bookmark
+Share
+AAIE-U4L3 Capstone Project Submission Guidelines.webp
+
+🏠 Home - All Lessons
+
+⬅️ Previous - RAG-Based AI Assistant Template
+
+➡️ Next - RAG Project Interview Questions
+
+Congratulations on completing Agentic AI Essentials Certification Program! Now it's time to demonstrate your learning through Project. This guide walks you through the exact steps to submit your RAG-based AI assistant project successfully.
+
+
+📋 Technical Requirements
+Before submitting, ensure your project meets these core requirements:
+
+RAG-based AI assistant application - Your system must use Retrieval-Augmented Generation
+Vector database integration - Incorporate a vector store (FAISS, Chroma, or alternatives) for document retrieval
+Document corpus embedding - Embed a collection of documents (Ready Tensor publications, Wikipedia articles, or other permitted sources)
+Working retrieval and response system - Demonstrate functional prompt → retrieval → response pipeline using LangChain
+Submission Deadlines ⏰
+Your project will be reviewed in the month that matches your submission date.
+Submit your Project 1 by any one of the following deadlines:
+
+ 🔴 January 05, 2026,11:59 PM UTC
+ 🔴 February 02, 2026, 11:59 PM UTC
+ 🔴 March 02, 2026, 11:59 PM UTC
+ 🔴 April 06, 2026, 11:59 PM UTC
+ 🔴 May 04, 2026, 11:59 PM UTC
+If you miss the due date for the month, no problem — just submit before the next one and your project will be reviewed in that month's review cycle.
+
+🚀 Step-by-Step Submission Process
+Before You Begin
+Make sure you’ve done the following:
+Have a Ready Tensor account – If you’re not already registered, 
+sign up here
+.
+Be enrolled in the program – If you haven’t joined yet
+Step 1: Create Your Publication
+The team lead creates a new publication on the Ready Tensor platform describing your project.
+
+⚠️ Create the publication in the team lead's personal hub (not in the hub named `Ready Tensor Certifications`).
+
+Step 2: Select the program
+In the Create Publication form, choose the correct Program from the dropdown (e.g., RAG-Based AI Assistant).
+
+If you don’t see the dropdown, you’re not enrolled — see the instruction on how to enroll above.
+Step 3: Add Co-Authors
+Don't forget to add your teammates as co-authors to the publication. The team lead's name will appear as the first author.
+
+Step 4: Link Your Code Repository
+Upload your GitHub repository URL in the "Code" section of the publication. Evaluators will access your code through this link.
+
+Please store API keys and sensitive data in a .env file, ensure it's listed in .gitignore, and use a .env_example to share required variable names securely.
+
+Step 5: Follow Best Practices
+Ensure your publication follows Ready Tensor's best practices for AI/ML project documentation. Refer to our published guidelines for detailed requirements.
+
+Step 6: Upload Supplementary Files
+You can upload any additional relevant files (PDFs, datasets, documentation) to support your submission.
+
+Step 7: Final Review and Submit
+Complete your submission before the deadline!
+
+You are encouraged to include a video demo of your app in your publication to enhance clarity and showcase your work more effectively. While not required, this is strongly recommended as videos serve as valuable portfolio additions. Record your application's workflow, optionally include a brief presentation, upload to YouTube, and attach the link to your Ready Tensor publication to improve readability and overall impact.
+
+📝 Publication Requirements Checklist
+ Published on Ready Tensor platform
+ Correct program selected in the dropdown (i.e., RAG-Based AI Assistant )
+ Created by the team lead
+ All teammates added as co-authors
+ GitHub repository linked under "Resources" section
+ Repository follows best practices for AI/ML code repositories
+ Documentation follows AI/ML project best practices
+💻 Code Repository Requirements
+Your GitHub repository must:
+
+Follow best practices for AI/ML code development (see our published guidelines)
+Be reproducible and runnable locally by our evaluation team
+Include clear setup instructions, sample inputs, and expected outputs
+Score 70% or higher on our 
+repository evaluation rubric
+Please ensure that API keys and other sensitive information are not exposed in your main GitHub repository or shared publicly. Instead, store such data in a .env file and make sure it is included in your .gitignore to prevent accidental uploads. For reproducibility, you should provide a .env_example file that outlines the required environment variables without revealing any real values. This practice helps maintain security while allowing others to understand how to set up the project properly. Thank you for following secure development practices.
+
+🔍 Evaluation Process
+After submission, our team will:
+
+Review your Ready Tensor publication
+Clone and run your GitHub repository locally
+Test the functionality of your RAG system
+Evaluate against our technical and documentation rubrics
+Provide feedback and certification status
+💡 Key Reminders
+Program selection is mandatory: Pick the correct program from the dropdown when creating your project.
+Team lead submits: Only the team lead creates the publication.
+Code must run: Ensure your repository is fully functional and reproducible.
+Meet the 70% threshold: Both publication and code must meet minimum quality standards.
+🤝 Need Help?
+If you have questions about the submission process or need technical assistance, reach out to our team on Discord. We're here to help you succeed!
+
+📚 Additional Resources
+Repository Best Practices Guide
+Technical Publication Rubric
+Ready Tensor Publication Best Practices
+Good luck with your Project submission! We're excited to see the RAG-based AI assistants you've built using the foundations from Agentic AI Essentials.
+
+🏠 Home - All Lessons
+
+⬅️ Previous - RAG-Based AI Assistant Template
+
+➡️ Next - RAG Project Interview Questions
+
+Table of contents
+
+📋 Technical Requirements
+
+
+🚀 Step-by-Step Submission Process
+
+
+📝 Publication Requirements Checklist
+
+
+💻 Code Repository Requirements
+
+
+🔍 Evaluation Process
+
+
+💡 Key Reminders
+
+
+🤝 Need Help?
+
+
+📚 Additional Resources
+
+About
+Docs
+Privacy
+Copyright
+Contact
+Support
+© Ready Tensor, Inc.
