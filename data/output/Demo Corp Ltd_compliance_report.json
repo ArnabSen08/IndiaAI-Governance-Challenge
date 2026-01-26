@@ -1,0 +1,242 @@
+{
+    "metadata": {
+        "company_name": "Demo Corp Ltd",
+        "report_period": "FY 2024-25",
+        "generated_date": "2026-01-27T02:03:21.905596",
+        "report_type": "Comprehensive Compliance Report"
+    },
+    "executive_summary": {
+        "overall_status": "NON-COMPLIANT",
+        "compliance_percentage": 64.28571428571429,
+        "total_checks": 14,
+        "summary": {
+            "passed": 9,
+            "warnings": 5,
+            "exceptions": 0,
+            "risks": 0
+        },
+        "interpretation": "The company achieved 64.3% compliance across all frameworks. 0 critical exceptions and 0 risk flags require immediate attention."
+    },
+    "compliance_scorecard": {
+        "IndAS": {
+            "compliance_percentage": 57.14285714285714,
+            "total_checks": 7,
+            "passed": 4,
+            "failed": 3,
+            "status": "FAIL",
+            "severity_breakdown": {
+                "critical": 4,
+                "high": 3,
+                "medium": 0,
+                "low": 0
+            }
+        },
+        "SEBI": {
+            "compliance_percentage": 71.42857142857143,
+            "total_checks": 7,
+            "passed": 5,
+            "failed": 2,
+            "status": "FAIL",
+            "severity_breakdown": {
+                "critical": 4,
+                "high": 3,
+                "medium": 0,
+                "low": 0
+            }
+        }
+    },
+    "framework_analysis": {
+        "SEBI": {
+            "total_findings": 7,
+            "critical": 4,
+            "high": 3,
+            "key_risks": [
+                "Independent Directors: Independent directors: 12.5% (required: 25%)",
+                "Audit Committee: Committee size: 2 (min 3 required)"
+            ],
+            "recommendations": [
+                "Enhance board composition with independent directors",
+                "Strengthen related party transaction controls",
+                "Ensure timely disclosure of material information",
+                "Review dividend policy alignment with performance"
+            ]
+        }
+    },
+    "detailed_findings": [
+        {
+            "finding_number": 1,
+            "rule_id": "INDAS_1_001",
+            "severity": "Critical",
+            "description": "Complete Set of Statements: Missing statements: cash_flow",
+            "affected_accounts": [],
+            "evidence": "Statements provided: ['metadata', 'balance_sheet', 'income_statement', 'disclosures', 'governance_data']",
+            "recommendation": "Provide all required financial statements per IndAS 1",
+            "xai_explanation": "Rule checks for presence of 4 required statements. Found 3",
+            "status": "Open"
+        },
+        {
+            "finding_number": 2,
+            "rule_id": "INDAS_1_002",
+            "severity": "Critical",
+            "description": "Fair Presentation: Balance sheet not balanced by 1000",
+            "affected_accounts": [
+                "all"
+            ],
+            "evidence": "Arithmetic verification completed. Issues: 1",
+            "recommendation": "Correct arithmetic errors and ensure fair presentation",
+            "xai_explanation": "Verification checked balance sheet balance and P&L arithmetic. 1 issues found",
+            "status": "Open"
+        },
+        {
+            "finding_number": 3,
+            "rule_id": "INDAS_8_001",
+            "severity": "High",
+            "description": "Disclosure of Accounting Policies: Missing policies: foreign, impairment, financial",
+            "affected_accounts": [],
+            "evidence": "Disclosed 2 required policies",
+            "recommendation": "Add disclosure of missing accounting policies",
+            "xai_explanation": "Checked disclosures for 5 required accounting policies. Missing: 3",
+            "status": "Open"
+        },
+        {
+            "finding_number": 8,
+            "rule_id": "SEBI_LODR_001",
+            "severity": "Critical",
+            "description": "Independent Directors: Independent directors: 12.5% (required: 25%)",
+            "affected_accounts": [
+                "Board of Directors"
+            ],
+            "evidence": "Total: 8, Independent: 1",
+            "recommendation": "Increase independent directors to 2",
+            "xai_explanation": "SEBI LODR requires minimum 25% independent directors. Current: 12.5%",
+            "status": "Open"
+        },
+        {
+            "finding_number": 9,
+            "rule_id": "SEBI_LODR_002",
+            "severity": "Critical",
+            "description": "Audit Committee: Committee size: 2 (min 3 required)",
+            "affected_accounts": [
+                "Audit Committee"
+            ],
+            "evidence": "Committee size: 2, Independent: 2",
+            "recommendation": "Ensure audit committee has minimum 3 members with majority independent",
+            "xai_explanation": "SEBI requires audit committee with 3+ members, 50%+ independent",
+            "status": "Open"
+        }
+    ],
+    "xai_explanations": {
+        "INDAS_1_001_001": {
+            "finding": "Complete Set of Statements: Missing statements: cash_flow",
+            "explanation": "This finding relates to INDAS_1_001. \n        The system detected that Complete Set of Statements: Missing statements: cash_flow.\n        \n        Evidence: Statements provided: ['metadata', 'balance_sheet', 'income_statement', 'disclosures', 'governance_data']\n        \n        Impact: This may result in regulatory penalties, audit qualifications, and investor concerns.\n        \n        Action: Provide all required financial statements per IndAS 1",
+            "confidence": 0.92,
+            "xai_method": "LIME + SHAP ensemble"
+        },
+        "INDAS_1_002_001": {
+            "finding": "Fair Presentation: Balance sheet not balanced by 1000",
+            "explanation": "This finding relates to INDAS_1_002. \n        The system detected that Fair Presentation: Balance sheet not balanced by 1000.\n        \n        Evidence: Arithmetic verification completed. Issues: 1\n        \n        Impact: This may result in regulatory penalties, audit qualifications, and investor concerns.\n        \n        Action: Correct arithmetic errors and ensure fair presentation",
+            "confidence": 0.92,
+            "xai_method": "LIME + SHAP ensemble"
+        },
+        "INDAS_8_001_001": {
+            "finding": "Disclosure of Accounting Policies: Missing policies: foreign, impairment, financial",
+            "explanation": "This finding relates to INDAS_8_001. \n        The system detected that Disclosure of Accounting Policies: Missing policies: foreign, impairment, financial.\n        \n        Evidence: Disclosed 2 required policies\n        \n        Impact: This may result in regulatory scrutiny and potential compliance issues.\n        \n        Action: Add disclosure of missing accounting policies",
+            "confidence": 0.92,
+            "xai_method": "LIME + SHAP ensemble"
+        },
+        "INDAS_109_001_001": {
+            "finding": "Classification of Financial Assets: Passed",
+            "explanation": "This finding relates to INDAS_109_001. \n        The system detected that Classification of Financial Assets: Passed.\n        \n        Evidence: Assume compliant for prototype\n        \n        Impact: This may result in regulatory scrutiny and potential compliance issues.\n        \n        Action:",
+            "confidence": 0.92,
+            "xai_method": "LIME + SHAP ensemble"
+        },
+        "INDAS_109_002_001": {
+            "finding": "Impairment Loss Allowance: Passed",
+            "explanation": "This finding relates to INDAS_109_002. \n        The system detected that Impairment Loss Allowance: Passed.\n        \n        Evidence: Assume compliant for prototype\n        \n        Impact: This may result in regulatory penalties, audit qualifications, and investor concerns.\n        \n        Action:",
+            "confidence": 0.92,
+            "xai_method": "LIME + SHAP ensemble"
+        },
+        "INDAS_115_001_001": {
+            "finding": "Revenue Recognition: Passed",
+            "explanation": "This finding relates to INDAS_115_001. \n        The system detected that Revenue Recognition: Passed.\n        \n        Evidence: Assume compliant for prototype\n        \n        Impact: This may result in regulatory penalties, audit qualifications, and investor concerns.\n        \n        Action:",
+            "confidence": 0.92,
+            "xai_method": "LIME + SHAP ensemble"
+        },
+        "INDAS_116_001_001": {
+            "finding": "Right-of-Use Asset: Passed",
+            "explanation": "This finding relates to INDAS_116_001. \n        The system detected that Right-of-Use Asset: Passed.\n        \n        Evidence: Assume compliant for prototype\n        \n        Impact: This may result in regulatory scrutiny and potential compliance issues.\n        \n        Action:",
+            "confidence": 0.92,
+            "xai_method": "LIME + SHAP ensemble"
+        },
+        "SEBI_LODR_001_001": {
+            "finding": "Independent Directors: Independent directors: 12.5% (required: 25%)",
+            "explanation": "This finding relates to SEBI_LODR_001. \n        The system detected that Independent Directors: Independent directors: 12.5% (required: 25%).\n        \n        Evidence: Total: 8, Independent: 1\n        \n        Impact: This may result in regulatory penalties, audit qualifications, and investor concerns.\n        \n        Action: Increase independent directors to 2",
+            "confidence": 0.92,
+            "xai_method": "LIME + SHAP ensemble"
+        },
+        "SEBI_LODR_002_001": {
+            "finding": "Audit Committee: Committee size: 2 (min 3 required)",
+            "explanation": "This finding relates to SEBI_LODR_002. \n        The system detected that Audit Committee: Committee size: 2 (min 3 required).\n        \n        Evidence: Committee size: 2, Independent: 2\n        \n        Impact: This may result in regulatory penalties, audit qualifications, and investor concerns.\n        \n        Action: Ensure audit committee has minimum 3 members with majority independent",
+            "confidence": 0.92,
+            "xai_method": "LIME + SHAP ensemble"
+        },
+        "SEBI_LODR_003_001": {
+            "finding": "Related Party Transactions: Passed",
+            "explanation": "This finding relates to SEBI_LODR_003. \n        The system detected that Related Party Transactions: Passed.\n        \n        Evidence: \n        \n        Impact: This may result in regulatory scrutiny and potential compliance issues.\n        \n        Action:",
+            "confidence": 0.92,
+            "xai_method": "LIME + SHAP ensemble"
+        }
+    },
+    "recommendations": [
+        {
+            "priority": "URGENT",
+            "finding_id": "INDAS_1_001_001",
+            "action": "Provide all required financial statements per IndAS 1",
+            "timeline": "0-30 days",
+            "owner": "CFO/Compliance Head",
+            "success_criteria": "Verify resolution of INDAS_1_001"
+        },
+        {
+            "priority": "URGENT",
+            "finding_id": "INDAS_1_002_001",
+            "action": "Correct arithmetic errors and ensure fair presentation",
+            "timeline": "0-30 days",
+            "owner": "CFO/Compliance Head",
+            "success_criteria": "Verify resolution of INDAS_1_002"
+        },
+        {
+            "priority": "URGENT",
+            "finding_id": "SEBI_LODR_001_001",
+            "action": "Increase independent directors to 2",
+            "timeline": "0-30 days",
+            "owner": "CFO/Compliance Head",
+            "success_criteria": "Verify resolution of SEBI_LODR_001"
+        },
+        {
+            "priority": "URGENT",
+            "finding_id": "SEBI_LODR_002_001",
+            "action": "Ensure audit committee has minimum 3 members with majority independent",
+            "timeline": "0-30 days",
+            "owner": "CFO/Compliance Head",
+            "success_criteria": "Verify resolution of SEBI_LODR_002"
+        },
+        {
+            "priority": "HIGH",
+            "finding_id": "INDAS_8_001_001",
+            "action": "Add disclosure of missing accounting policies",
+            "timeline": "30-60 days",
+            "owner": "Finance Department",
+            "success_criteria": "Verify resolution of INDAS_8_001"
+        }
+    ],
+    "audit_trail": {
+        "total_rules_evaluated": 14,
+        "evaluation_timestamp": "2026-01-27T02:03:21.905811",
+        "rules_by_framework": {
+            "IndAS": 7,
+            "SEBI": 7,
+            "RBI": 0,
+            "ESG": 0
+        }
+    }
+}
