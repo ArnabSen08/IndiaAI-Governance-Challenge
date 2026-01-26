@@ -58,9 +58,10 @@ The resulting solutions should have cross-sectoral and nationwide applicability,
    - Department: Roads and Buildings
    - **See**: Urban Infrastructure Planning Decision Support System
 
-5. **School Infrastructure Validation**
+5. **School Infrastructure Validation** ⭐ **[DETAILED SOLUTION PROVIDED]**
    - AI model to forecast and validate infrastructure requirements for schools
    - Department: School Education
+   - **See**: School Infrastructure Forecasting and Validation System
 
 6. **Urban Land Use Monitoring**
    - Automated system for property identification and change detection using satellite imagery
@@ -131,6 +132,17 @@ The resulting solutions should have cross-sectoral and nationwide applicability,
    - Portfolio optimization and investment allocation
    - GIS integration and spatial analysis
    - Real-time dashboards and visualization
+   - Database schema and data pipeline
+   - API specifications
+   - 12-Month Implementation Roadmap
+
+7. **[school-infrastructure-validation.md](school-infrastructure-validation.md)** (38 KB)
+   - AI model for forecasting and validating school infrastructure requirements
+   - Enrollment forecasting (LSTM + XGBoost + Prophet ensemble)
+   - Infrastructure requirement prediction (Classrooms, Toilets, Teachers)
+   - Gap analysis and priority scoring
+   - Field validation mechanisms and mobile app
+   - RTE Act compliance checking
    - Database schema and data pipeline
    - API specifications
    - 12-Month Implementation Roadmap
@@ -390,6 +402,7 @@ Recommended Price Band with Reasoning
 ├── ml-algorithms-models.md             # ML models & algorithms
 ├── last-mile-delivery-optimization.md  # Last-mile delivery system
 ├── urban-infrastructure-planning.md    # Infrastructure planning system
+├── school-infrastructure-validation.md # School infrastructure system
 ├── docs/
 │   ├── index.html                      # GitHub Pages demo site
 │   ├── styles.css                      # Styling
