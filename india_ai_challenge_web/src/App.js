@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
     AppBar,
     Toolbar,
@@ -12,6 +12,9 @@ import {
     CardMedia,
     CardActions,
     Chip,
+    Tabs,
+    Tab,
+    Fade,
 } from '@mui/material';
 import {
     Timeline,
@@ -25,47 +28,26 @@ import {
 import RocketLaunchIcon from '@mui/icons-material/RocketLaunch';
 import CodeIcon from '@mui/icons-material/Code';
 import EmojiEventsIcon from '@mui/icons-material/EmojiEvents';
+import { challenges } from './challenges';
 
 function App() {
-    const problems = [
-        {
-            title: "AI in Healthcare",
-            desc: "Develop AI models for early disease detection and personalized treatment plans using public health datasets.",
-            img: "https://source.unsplash.com/random/400x200?medical",
-            tag: "Healthcare"
-        },
-        {
-            title: "Agriculture & Supply Chain",
-            desc: "Optimize crop yield prediction and supply chain logistics to reduce food wastage using satellite imagery.",
-            img: "https://source.unsplash.com/random/400x200?agriculture",
-            tag: "Agriculture"
-        },
-        {
-            title: "Financial Fraud Detection",
-            desc: "Build robust AI compliance engines to detect banking fraud and validate financial statements against regulations.",
-            img: "https://source.unsplash.com/random/400x200?finance",
-            tag: "FinTech"
-        },
-        {
-            title: "Smart Cities",
-            desc: "Create intelligent traffic management and waste disposal systems for growing urban infrastructure.",
-            img: "https://source.unsplash.com/random/400x200?city",
-            tag: "Urban"
-        }
-    ];
+    const [tabValue, setTabValue] = useState(0);
+
+    const handleTabChange = (event, newValue) => {
+        setTabValue(newValue);
+    };
 
     return (
-        <Box>
+        <Box sx={{ bgcolor: '#f5f5f5', minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
             {/* Navbar */}
-            <AppBar position="static" color="default" elevation={1}>
+            <AppBar position="sticky" color="default" elevation={2}>
                 <Toolbar>
-                    <Typography variant="h6" component="div" sx={{ flexGrow: 1, fontWeight: 'bold', color: '#333' }}>
-                        IndiaAI Challenge
+                    <Typography variant="h6" component="div" sx={{ flexGrow: 1, fontWeight: 'bold', color: '#1a237e' }}>
+                        IndiaAI Challenge Portal
                     </Typography>
-                    <Button color="inherit">About</Button>
-                    <Button color="inherit">Problems</Button>
-                    <Button color="inherit">Timeline</Button>
-                    <Button variant="contained" color="primary">Register Now</Button>
+                    <Button color="inherit">Overview</Button>
+                    <Button color="inherit">Challenges</Button>
+                    <Button variant="contained" color="primary" sx={{ ml: 2 }}>Login</Button>
                 </Toolbar>
             </AppBar>
 
@@ -73,62 +55,99 @@ function App() {
             <Box sx={{
                 bgcolor: '#1a237e',
                 color: 'white',
-                py: 10,
+                py: 8,
                 textAlign: 'center',
-                background: 'linear-gradient(45deg, #FF9933 30%, #FFFFFF 90%, #138808 100%)'
+                background: 'linear-gradient(135deg, #FF9933 0%, #FFFFFF 50%, #138808 100%)',
+                position: 'relative'
             }}>
-                <Container maxWidth="md">
-                    <Typography variant="h2" component="h1" gutterBottom sx={{ color: '#000', fontWeight: '800' }}>
-                        IndiaAI Solutions Challenge 2026
+                <Box sx={{
+                    position: 'absolute', top: 0, left: 0, right: 0, bottom: 0,
+                    bgcolor: 'rgba(255,255,255,0.8)', zIndex: 1
+                }} />
+                <Container maxWidth="md" sx={{ position: 'relative', zIndex: 2 }}>
+                    <Typography variant="h2" component="h1" gutterBottom sx={{ color: '#1a237e', fontWeight: '800' }}>
+                        IndiaAI Solutions Challenge
                     </Typography>
-                    <Typography variant="h5" sx={{ mb: 4, color: '#333' }}>
-                        Innovating for a Billion Lives | Jan 26 - Mar 31, 2026
+                    <Typography variant="h5" sx={{ mb: 4, color: '#333', fontWeight: 500 }}>
+                        Solving Governance, Healthcare, and Financial Compliance for a Digital India
                     </Typography>
-                    <Button variant="contained" size="large" sx={{ bgcolor: '#000', color: 'white', px: 5 }}>
-                        View Problem Statements
-                    </Button>
                 </Container>
             </Box>
 
-            {/* Problem Statements */}
-            <Container sx={{ py: 8 }} maxWidth="lg">
-                <Typography variant="h3" align="center" gutterBottom sx={{ mb: 6 }}>
-                    Problem Statements
-                </Typography>
-                <Grid container spacing={4}>
-                    {problems.map((prob, index) => (
-                        <Grid item key={index} xs={12} sm={6} md={3}>
-                            <Card sx={{ height: '100%', display: 'flex', flexDirection: 'column', transition: '0.3s', '&:hover': { transform: 'scale(1.05)' } }}>
-                                <CardMedia
-                                    component="img"
-                                    height="140"
-                                    image={prob.img}
-                                    alt={prob.title}
-                                />
-                                <CardContent sx={{ flexGrow: 1 }}>
-                                    <Typography gutterBottom variant="h5" component="h2">
-                                        {prob.title}
-                                    </Typography>
-                                    <Typography>
-                                        {prob.desc}
-                                    </Typography>
-                                    <Chip label={prob.tag} size="small" color="primary" sx={{ mt: 2 }} />
-                                </CardContent>
-                                <CardActions>
-                                    <Button size="small">Details</Button>
-                                    <Button size="small">Apply</Button>
-                                </CardActions>
-                            </Card>
-                        </Grid>
-                    ))}
-                </Grid>
+            {/* Challenge Categories Tabs */}
+            <Container sx={{ mt: -4, mb: 4, position: 'relative', zIndex: 3 }}>
+                <Card elevation={3}>
+                    <Tabs
+                        value={tabValue}
+                        onChange={handleTabChange}
+                        variant="scrollable"
+                        scrollButtons="auto"
+                        centered
+                        textColor="primary"
+                        indicatorColor="primary"
+                        sx={{ bgcolor: 'white', borderRadius: 1 }}
+                    >
+                        {challenges.map((challenge) => (
+                            <Tab key={challenge.id} label={challenge.category} />
+                        ))}
+                    </Tabs>
+                </Card>
+            </Container>
+
+
+            {/* Dynamic Challenge Content */}
+            <Container sx={{ py: 4, flexGrow: 1 }} maxWidth="lg">
+                {challenges.map((category, index) => (
+                    <div key={category.id} role="tabpanel" hidden={tabValue !== index}>
+                        {tabValue === index && (
+                            <Fade in={true} timeout={500}>
+                                <Box>
+                                    <Box sx={{ mb: 4, textAlign: 'center' }}>
+                                        <Typography variant="h4" component="h2" gutterBottom color="primary">
+                                            {category.category}
+                                        </Typography>
+                                        <Typography variant="subtitle1" color="text.secondary">
+                                            {category.description}
+                                        </Typography>
+                                    </Box>
+                                    <Grid container spacing={4}>
+                                        {category.items.map((prob, idx) => (
+                                            <Grid item key={idx} xs={12} sm={6} md={4}>
+                                                <Card sx={{ height: '100%', display: 'flex', flexDirection: 'column', transition: '0.3s', '&:hover': { transform: 'translateY(-5px)', boxShadow: 6 } }}>
+                                                    <CardMedia
+                                                        component="img"
+                                                        height="160"
+                                                        image={prob.img}
+                                                        alt={prob.title}
+                                                    />
+                                                    <CardContent sx={{ flexGrow: 1 }}>
+                                                        <Typography gutterBottom variant="h6" component="h3" sx={{ fontWeight: 'bold' }}>
+                                                            {prob.title}
+                                                        </Typography>
+                                                        <Typography variant="body2" color="text.secondary" paragraph>
+                                                            {prob.desc}
+                                                        </Typography>
+                                                        <Chip label={prob.tag} size="small" color="primary" variant="outlined" />
+                                                    </CardContent>
+                                                    <CardActions sx={{ p: 2, pt: 0 }}>
+                                                        <Button size="small" variant="contained" fullWidth>View Details</Button>
+                                                    </CardActions>
+                                                </Card>
+                                            </Grid>
+                                        ))}
+                                    </Grid>
+                                </Box>
+                            </Fade>
+                        )}
+                    </div>
+                ))}
             </Container>
 
             {/* Timeline */}
-            <Box sx={{ bgcolor: '#e3f2fd', py: 8 }}>
+            <Box sx={{ bgcolor: 'white', py: 8, mt: 4 }}>
                 <Container maxWidth="md">
-                    <Typography variant="h3" align="center" gutterBottom sx={{ mb: 4 }}>
-                        Challenge Timeline
+                    <Typography variant="h4" align="center" gutterBottom sx={{ mb: 4, color: '#1a237e' }}>
+                        Roadmap to Innovation
                     </Typography>
                     <Timeline position="alternate">
                         <TimelineItem>
@@ -143,31 +162,31 @@ function App() {
                             </TimelineSeparator>
                             <TimelineContent>
                                 <Typography variant="h6" component="span">
-                                    Applications Open
+                                    Launch
                                 </Typography>
-                                <Typography>Register your team and select a problem statement.</Typography>
+                                <Typography variant="body2">Applications Open</Typography>
                             </TimelineContent>
                         </TimelineItem>
                         <TimelineItem>
                             <TimelineOppositeContent color="text.secondary">
-                                Feb 20, 2026
+                                Mar 15, 2026
                             </TimelineOppositeContent>
                             <TimelineSeparator>
-                                <TimelineDot color="secondary">
+                                <TimelineDot color="warning">
                                     <CodeIcon />
                                 </TimelineDot>
                                 <TimelineConnector />
                             </TimelineSeparator>
                             <TimelineContent>
                                 <Typography variant="h6" component="span">
-                                    Phase 1 Submission
+                                    Prototype Submission
                                 </Typography>
-                                <Typography>Submit your prototype and technical design.</Typography>
+                                <Typography variant="body2">Phase 1 Evaluation</Typography>
                             </TimelineContent>
                         </TimelineItem>
                         <TimelineItem>
                             <TimelineOppositeContent color="text.secondary">
-                                Mar 31, 2026
+                                May 01, 2026
                             </TimelineOppositeContent>
                             <TimelineSeparator>
                                 <TimelineDot color="success">
@@ -178,7 +197,7 @@ function App() {
                                 <Typography variant="h6" component="span">
                                     Grand Finale
                                 </Typography>
-                                <Typography>Final presentation and Winner announcement.</Typography>
+                                <Typography variant="body2">Awards & Deployment</Typography>
                             </TimelineContent>
                         </TimelineItem>
                     </Timeline>
@@ -186,18 +205,27 @@ function App() {
             </Box>
 
             {/* Footer */}
-            <Box sx={{ bgcolor: '#333', color: 'white', p: 6 }} component="footer">
-                <Typography variant="h6" align="center" gutterBottom>
-                    IndiaAI Mission
-                </Typography>
-                <Typography variant="subtitle1" align="center" component="p">
-                    Ministry of Electronics and Information Technology (MeitY), Government of India
-                </Typography>
-                <Typography variant="body2" align="center" sx={{ mt: 2, color: '#aaa' }}>
-                    Contact: support@indiaai.gov.in | +91-11-2430xxxx
-                </Typography>
-                <Typography variant="body2" align="center" sx={{ mt: 4, color: '#777' }}>
-                    {'Copyright © '} IndiaAI {new Date().getFullYear()}
+            <Box sx={{ bgcolor: '#263238', color: 'white', p: 6, mt: 'auto' }} component="footer">
+                <Grid container spacing={4} justifyContent="center">
+                    <Grid item xs={12} sm={4} textAlign="center">
+                        <Typography variant="h6" gutterBottom color="#FF9933">
+                            IndiaAI Mission
+                        </Typography>
+                        <Typography variant="body2">
+                            Empowering India through Artificial Intelligence. A MeitY initiative.
+                        </Typography>
+                    </Grid>
+                    <Grid item xs={12} sm={4} textAlign="center">
+                        <Typography variant="h6" gutterBottom color="#138808">
+                            Contact
+                        </Typography>
+                        <Typography variant="body2">
+                            support@indiaai.gov.in
+                        </Typography>
+                    </Grid>
+                </Grid>
+                <Typography variant="body2" align="center" sx={{ mt: 4, color: '#90a4ae' }}>
+                    {'© '} IndiaAI {new Date().getFullYear()}
                 </Typography>
             </Box>
         </Box>
