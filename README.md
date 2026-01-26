@@ -42,17 +42,21 @@ The resulting solutions should have cross-sectoral and nationwide applicability,
    - Department: Municipal Administration & Urban Development
    - **See**: Smart Market Linkage Platform Design & Implementation
 
-2. **Last-Mile Delivery Optimisation**
+2. **Last-Mile Delivery Optimisation** ⭐ **[DETAILED SOLUTION PROVIDED]**
    - AI-based monitoring and optimisation of delivery of essential government supplies
    - Department: Women Development & Child Welfare
+   - **See**: Last-Mile Delivery Optimization System Design
 
-3. **Renewable Energy Land Allocation**
+3. **Renewable Energy Land Allocation** ⭐ **[DETAILED SOLUTION PROVIDED]**
    - GIS-based tool to automate conflict-free land allotment for solar and wind projects
    - Organization: New & Renewable Energy Development Corporation
+   - **Satellite Imagery** + **Geospatial Analysis** + **ML for Suitability** + **Optimization**
+   - **See**: GIS Land Allocation System Design & Implementation
 
-4. **Urban Infrastructure Planning**
+4. **Urban Infrastructure Planning** ⭐ **[DETAILED SOLUTION PROVIDED]**
    - Decision support system for planning bridges and flyovers using traffic and mobility data
    - Department: Roads and Buildings
+   - **See**: Urban Infrastructure Planning Decision Support System
 
 5. **School Infrastructure Validation**
    - AI model to forecast and validate infrastructure requirements for schools
@@ -109,6 +113,91 @@ The resulting solutions should have cross-sectoral and nationwide applicability,
    - Price Optimization Algorithms
    - Ensemble Methods
    - Feature Engineering
+
+5. **[last-mile-delivery-optimization.md](last-mile-delivery-optimization.md)** (35 KB)
+   - AI-based monitoring and optimization system
+   - Predictive models (Demand, Delivery Time, Vehicle Failure)
+   - Route optimization techniques (VRP, Multi-objective)
+   - Real-time tracking dashboards
+   - Database schema and data pipeline
+   - API specifications
+   - 12-Month Implementation Roadmap
+
+6. **[urban-infrastructure-planning.md](urban-infrastructure-planning.md)** (40 KB)
+   - AI-based decision support system for bridges and flyovers
+   - Traffic data analysis and mobility pattern extraction
+   - Predictive models (Traffic Growth, Congestion, Infrastructure Impact)
+   - Multi-criteria decision analysis and benefit-cost analysis
+   - Portfolio optimization and investment allocation
+   - GIS integration and spatial analysis
+   - Real-time dashboards and visualization
+   - Database schema and data pipeline
+   - API specifications
+   - 12-Month Implementation Roadmap
+
+### GIS Land Allocation System (Problem Statement 3)
+
+7. **[GIS-PROJECT-SUMMARY.md](GIS-PROJECT-SUMMARY.md)** (Executive Overview)
+   - Project objectives and deliverables
+   - System architecture with 5-layer design
+   - Implementation timeline
+   - Success metrics and KPIs
+   - Deployment checklist
+
+8. **[gis-land-allocation-design.md](gis-land-allocation-design.md)** (26.8 KB)
+   - Complete GIS system architecture
+   - Satellite data integration (Sentinel-1/2, Landsat, DEM)
+   - 7 Core Modules:
+     - Data Ingestion Layer
+     - Geospatial Processing Layer
+     - ML Land Suitability Analysis
+     - Optimization & Allocation Layer
+     - Application Layer
+   - Suitability Scoring Framework:
+     - Multi-criteria analysis
+     - Solar and wind-specific models
+     - Conflict detection algorithms
+   - Land Allocation Optimization:
+     - Linear Programming approach
+     - Genetic Algorithm approach
+   - FastAPI REST endpoints
+   - 8-Month Implementation Roadmap
+
+9. **[satellite-geospatial-processing.md](satellite-geospatial-processing.md)** (28.5 KB)
+   - Sentinel-2 multispectral processing
+   - Sentinel-1 SAR processing
+   - Spectral indices (NDVI, NDBI, NDWI, NDII, BSI)
+   - Digital Elevation Model (DEM) analysis
+   - Topographic analysis (Slope, Aspect, Roughness, TWI, TPI)
+   - Solar irradiance calculation (Liu-Jordan model)
+   - Wind speed estimation (Log wind profile)
+   - Vector operations (Buffers, Overlays, Spatial Joins)
+   - Fragmentation analysis
+   - Time series analysis and crop calendar detection
+   - Cloud masking and speckle filtering
+   - Accuracy assessment with confusion matrices
+
+10. **[ml-algorithms-conflict-detection.md](ml-algorithms-conflict-detection.md)** (24.3 KB)
+    - Ensemble Land Suitability Models
+    - Random Forest + Gradient Boosting
+    - Deep Learning CNN for spatial context
+    - Multi-class Conflict Detection (7 conflict types)
+    - Anomaly detection for unknown conflicts
+    - Multi-objective optimization (NSGA-II)
+    - Pareto-optimal solution extraction
+    - Model explainability (SHAP)
+    - Uncertainty quantification
+    - Custom metrics for allocation evaluation
+
+11. **[GIS-IMPLEMENTATION-GUIDE.md](GIS-IMPLEMENTATION-GUIDE.md)** (25.4 KB)
+    - Environment setup with full dependency list
+    - PostgreSQL + PostGIS database schema (6 tables)
+    - Data pipeline orchestration
+    - FastAPI implementation (4 core endpoints)
+    - Unit and integration tests
+    - Docker containerization
+    - Performance optimization (caching, parallel processing)
+    - Testing framework and validation
 
 ---
 
@@ -299,6 +388,8 @@ Recommended Price Band with Reasoning
 ├── data-architecture-pipeline.md       # Data infrastructure
 ├── ecommerce-integration-guide.md      # E-commerce integration
 ├── ml-algorithms-models.md             # ML models & algorithms
+├── last-mile-delivery-optimization.md  # Last-mile delivery system
+├── urban-infrastructure-planning.md    # Infrastructure planning system
 ├── docs/
 │   ├── index.html                      # GitHub Pages demo site
 │   ├── styles.css                      # Styling
