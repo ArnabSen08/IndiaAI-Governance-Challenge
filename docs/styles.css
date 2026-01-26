@@ -471,3 +471,58 @@ body {
         grid-template-columns: 1fr;
     }
 }
+
+/* Tabs */
+.tabs {
+    background: var(--light-bg);
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.tabs .container {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.tab-link {
+    padding: 1rem 1.5rem;
+    cursor: pointer;
+    border: none;
+    background: none;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: var(--text-light);
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.tab-link:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: var(--secondary-color);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.tab-link.active {
+    color: var(--primary-color);
+}
+
+.tab-link.active:after {
+    transform: scaleX(1);
+}
+
+.tab-content {
+    display: none;
+    padding: 2rem 0;
+    animation: fadeInUp 0.5s ease;
+}
+
+.tab-content.active {
+    display: block;
+}
