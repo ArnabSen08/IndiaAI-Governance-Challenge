@@ -1,0 +1,41 @@
+{
+  "name": "blockchain-lottery-dapp",
+  "version": "1.0.0",
+  "description": "A decentralized lottery application built with Ethereum smart contracts and React frontend",
+  "main": "index.js",
+  "scripts": {
+    "test": "hardhat test",
+    "compile": "hardhat compile",
+    "deploy": "hardhat ignition deploy ./ignition/modules/Lottery.js --network sepolia",
+    "frontend:install": "cd frontend && npm install",
+    "frontend:dev": "cd frontend && npm run dev",
+    "frontend:build": "cd frontend && npm run build",
+    "dev": "npm run frontend:dev",
+    "build": "npm run compile && npm run frontend:build",
+    "install:all": "npm install && npm run frontend:install",
+    "setup": "node setup.js"
+  },
+  "keywords": [
+    "blockchain",
+    "ethereum",
+    "solidity",
+    "dapp",
+    "lottery",
+    "web3",
+    "react",
+    "hardhat"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ArnabSen08/blockchain-lottery-dapp.git"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "hardhat": "^2.22.19"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7"
+  }
+}
