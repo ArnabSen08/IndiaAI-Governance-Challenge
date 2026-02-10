@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevToolkit - Essential Developer Utilities</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><i class="fas fa-tools"></i> DevToolkit</h1>
+            <p>Essential utilities for developers - all in one place</p>
+        </div>
+    </header>
+
+    <nav class="tool-nav">
+        <div class="container">
+            <div class="nav-buttons">
+                <button class="nav-btn active" data-tool="password">
+                    <i class="fas fa-shield-alt"></i> Password Checker
+                </button>
+                <button class="nav-btn" data-tool="case">
+                    <i class="fas fa-font"></i> Case Converter
+                </button>
+                <button class="nav-btn" data-tool="contrast">
+                    <i class="fas fa-eye"></i> Color Contrast
+                </button>
+                <button class="nav-btn" data-tool="json">
+                    <i class="fas fa-code"></i> JSON Formatter
+                </button>
+                <button class="nav-btn" data-tool="qr">
+                    <i class="fas fa-qrcode"></i> QR Generator
+                </button>
+                <button class="nav-btn" data-tool="timezone">
+                    <i class="fas fa-clock"></i> Timezone
+                </button>
+                <button class="nav-btn" data-tool="lorem">
+                    <i class="fas fa-paragraph"></i> Lorem Ipsum
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container">
+        <!-- Password Strength Checker -->
+        <div class="tool-section active" id="password-tool">
+            <div class="tool-card">
+                <h2><i class="fas fa-shield-alt"></i> Password Strength Checker</h2>
+                <div class="input-group">
+                    <input type="password" id="password-input" placeholder="Enter your password">
+                    <button type="button" id="toggle-password" class="toggle-btn">
+                        <i class="fas fa-eye"></i>
+                    </button>
+                </div>
+                <div class="strength-meter">
+                    <div class="strength-bar" id="strength-bar"></div>
+                </div>
+                <div class="strength-text" id="strength-text">Enter a password to check its strength</div>
+                <div class="password-tips" id="password-tips"></div>
+            </div>
+        </div>
+
+        <!-- Case Converter -->
+        <div class="tool-section" id="case-tool">
+            <div class="tool-card">
+                <h2><i class="fas fa-font"></i> Text Case Converter</h2>
+                <textarea id="case-input" placeholder="Enter your text here..."></textarea>
+                <div class="case-buttons">
+                    <button class="case-btn" data-case="camel">camelCase</button>
+                    <button class="case-btn" data-case="pascal">PascalCase</button>
+                    <button class="case-btn" data-case="snake">snake_case</button>
+                    <button class="case-btn" data-case="kebab">kebab-case</button>
+                    <button class="case-btn" data-case="upper">UPPER CASE</button>
+                    <button class="case-btn" data-case="lower">lower case</button>
+                    <button class="case-btn" data-case="title">Title Case</button>
+                </div>
+                <div class="output-section">
+                    <textarea id="case-output" readonly placeholder="Converted text will appear here..."></textarea>
+                    <button class="copy-btn" id="copy-case">
+                        <i class="fas fa-copy"></i> Copy
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Color Contrast Checker -->
+        <div class="tool-section" id="contrast-tool">
+            <div class="tool-card">
+                <h2><i class="fas fa-eye"></i> Color Contrast Checker</h2>
+                <div class="color-inputs">
+                    <div class="color-input-group">
+                        <label for="bg-color">Background Color</label>
+                        <div class="color-picker-group">
+                            <input type="color" id="bg-color" value="#ffffff">
+                            <input type="text" id="bg-color-text" value="#ffffff">
+                        </div>
+                    </div>
+                    <div class="color-input-group">
+                        <label for="text-color">Text Color</label>
+                        <div class="color-picker-group">
+                            <input type="color" id="text-color" value="#000000">
+                            <input type="text" id="text-color-text" value="#000000">
+                        </div>
+                    </div>
+                </div>
+                <div class="contrast-preview" id="contrast-preview">
+                    <p>Sample text to check contrast</p>
+                </div>
+                <div class="contrast-results" id="contrast-results"></div>
+            </div>
+        </div>
+
+        <!-- JSON Formatter -->
+        <div class="tool-section" id="json-tool">
+            <div class="tool-card">
+                <h2><i class="fas fa-code"></i> JSON Formatter & Validator</h2>
+                <div class="json-container">
+                    <div class="json-input-section">
+                        <textarea id="json-input" placeholder="Paste your JSON here..."></textarea>
+                        <div class="json-buttons">
+                            <button id="format-json">Format</button>
+                            <button id="minify-json">Minify</button>
+                            <button id="validate-json">Validate</button>
+                        </div>
+                    </div>
+                    <div class="json-output-section">
+                        <textarea id="json-output" readonly placeholder="Formatted JSON will appear here..."></textarea>
+                        <button class="copy-btn" id="copy-json">
+                            <i class="fas fa-copy"></i> Copy
+                        </button>
+                    </div>
+                </div>
+                <div class="json-status" id="json-status"></div>
+            </div>
+        </div>
+
+        <!-- QR Code Generator -->
+        <div class="tool-section" id="qr-tool">
+            <div class="tool-card">
+                <h2><i class="fas fa-qrcode"></i> QR Code Generator</h2>
+                <div class="qr-inputs">
+                    <textarea id="qr-input" placeholder="Enter text or URL to generate QR code..."></textarea>
+                    <div class="qr-options">
+                        <label for="qr-size">Size:</label>
+                        <select id="qr-size">
+                            <option value="200">200x200</option>
+                            <option value="300" selected>300x300</option>
+                            <option value="400">400x400</option>
+                            <option value="500">500x500</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="qr-output">
+                    <div id="qr-code"></div>
+                    <button class="download-btn" id="download-qr" style="display: none;">
+                        <i class="fas fa-download"></i> Download QR Code
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Timezone Converter -->
+        <div class="tool-section" id="timezone-tool">
+            <div class="tool-card">
+                <h2><i class="fas fa-clock"></i> Timezone Converter</h2>
+                <div class="timezone-inputs">
+                    <div class="time-input-group">
+                        <label for="source-time">Time</label>
+                        <input type="datetime-local" id="source-time">
+                    </div>
+                    <div class="timezone-selects">
+                        <div class="timezone-select-group">
+                            <label for="source-timezone">From Timezone</label>
+                            <select id="source-timezone"></select>
+                        </div>
+                        <div class="timezone-select-group">
+                            <label for="target-timezone">To Timezone</label>
+                            <select id="target-timezone"></select>
+                        </div>
+                    </div>
+                </div>
+                <div class="timezone-results" id="timezone-results"></div>
+            </div>
+        </div>
+
+        <!-- Lorem Ipsum Generator -->
+        <div class="tool-section" id="lorem-tool">
+            <div class="tool-card">
+                <h2><i class="fas fa-paragraph"></i> Lorem Ipsum Generator</h2>
+                <div class="lorem-options">
+                    <div class="option-group">
+                        <label for="lorem-type">Type:</label>
+                        <select id="lorem-type">
+                            <option value="paragraphs">Paragraphs</option>
+                            <option value="sentences">Sentences</option>
+                            <option value="words">Words</option>
+                        </select>
+                    </div>
+                    <div class="option-group">
+                        <label for="lorem-count">Count:</label>
+                        <input type="number" id="lorem-count" value="3" min="1" max="50">
+                    </div>
+                    <button id="generate-lorem">Generate</button>
+                </div>
+                <div class="lorem-output">
+                    <textarea id="lorem-result" readonly placeholder="Generated lorem ipsum will appear here..."></textarea>
+                    <button class="copy-btn" id="copy-lorem">
+                        <i class="fas fa-copy"></i> Copy
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 DevToolkit - Built with ❤️ for developers</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/qrcode@1.5.3/build/qrcode.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
