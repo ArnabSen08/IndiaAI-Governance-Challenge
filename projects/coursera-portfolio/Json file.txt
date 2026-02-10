@@ -1,0 +1,926 @@
+[
+  {
+    "title": "Administering Microsoft Teams Bootcamp: Session 2 Replay",
+    "category": "Cloud & Productivity",
+    "certificate": "View",
+    "status": "Completed",
+    "date": "2026-01-08"
+  },
+  {
+    "title": "Data Visualization with Python Bootcamp March 2025: Session 1 Replay",
+    "category": "Data Science",
+    "certificate": "View",
+    "status": "Completed",
+    "date": "2026-01-05"
+  },
+  {
+    "title": "Data Visualization with Python Bootcamp March 2025: Session 2 Replay",
+    "category": "Data Science",
+    "certificate": "View",
+    "status": "Completed",
+    "date": "2026-01-05"
+  },
+  {
+    "title": "Data Literacy for All Bootcamp May 2025: Session 2 Replay",
+    "category": "Data Literacy",
+    "certificate": "View",
+    "status": "Completed",
+    "date": "2025-12-29"
+  },
+  {
+    "title": "Data Literacy for All Bootcamp May 2025: Session 3 Replay",
+    "category": "Data Literacy",
+    "certificate": "View",
+    "status": "Completed",
+    "date": "2025-12-29"
+  },
+  {
+    "title": "Intro to AI Agents Bootcamp November 2025: Session 1 Replay",
+    "category": "Artificial Intelligence",
+    "certificate": "View",
+    "status": "Completed",
+    "date": "2025-12-23"
+  },
+  {
+    "title": "Intro to AI Agents Bootcamp November 2025: Session 2 Replay",
+    "category": "Artificial Intelligence",
+    "certificate": "View",
+    "status": "Completed",
+    "date": "2025-12-23"
+  },
+  {
+    "title": "CompTIA Security+ Crash Course Bootcamp October 2025: Session 1 Replay",
+    "category": "Cybersecurity",
+    "certificate": "View",
+    "status": "Completed",
+    "date": "2025-12-19"
+  },
+  {
+    "title": "Introduction to TypeScript Bootcamp July 2025: Session 1 Replay",
+    "category": "Software Development",
+    "certificate": "View",
+    "status": "Completed",
+    "date": "2025-11-14"
+  },
+  {
+    "title": "Introduction to TypeScript Bootcamp July 2025: Session 2 Replay",
+    "category": "Software Development",
+    "certificate": "View",
+    "status": "Completed",
+    "date": "2025-11-14"
+  },
+  {
+    "title": "Administering Microsoft Teams Bootcamp: Session 1 Replay",
+    "category": "Cloud & Productivity",
+    "certificate": "View",
+    "status": "Completed",
+    "date": "2025-08-20"
+  },
+  {
+    "title": "Azure Fundamentals Bootcamp: Session 1 Replay",
+    "category": "Cloud Computing",
+    "certificate": "View",
+    "status": "Completed",
+    "date": "2025-06-23"
+  },
+  {
+    "title": "Managing Modern Desktops Bootcamp: Session 3 Replay",
+    "category": "IT Operations",
+    "certificate": "View",
+    "status": "Completed",
+    "date": "2025-06-11"
+  },
+  {
+    "title": "Data Literacy for All Bootcamp May 2025: Session 1 Replay",
+    "category": "Data Literacy",
+    "certificate": "View",
+    "status": "Completed",
+    "date": "2025-06-11"
+  },
+  {
+    "title": "Managing Modern Desktops Bootcamp: Session 2 Replay",
+    "category": "IT Operations",
+    "certificate": "View",
+    "status": "Completed",
+    "date": "2025-06-06"
+  },
+  {
+    "title": "Managing Modern Desktops Bootcamp: Session 1 Replay",
+    "category": "IT Operations",
+    "certificate": "View",
+    "status": "Completed",
+    "date": "2025-06-03"
+  },
+  {
+    "title": "Asynchronous JavaScript Bootcamp May 2024: Session 1 Replay",
+    "category": "Software Development",
+    "certificate": "View",
+    "status": "Completed",
+    "date": "2025-06-02"
+  },
+  {
+    "title": "Asynchronous JavaScript Bootcamp May 2024: Session 2 Replay",
+    "category": "Software Development",
+    "certificate": "View",
+    "status": "Completed",
+    "date": "2025-06-02"
+  },
+  {
+    "title": "Agile Development Bootcamp: Session 2 Replay",
+    "category": "Methodology",
+    "certificate": "View",
+    "status": "Completed",
+    "date": "2025-05-21"
+  },
+  {
+    "title": "Agile Development Bootcamp: Session 1 Replay",
+    "category": "Methodology",
+    "certificate": "View",
+    "status": "Completed",
+    "date": "2025-05-20"
+  },
+  {
+    "title": "Introduction to the Agile Principles and Mindset Bootcamp: Session 1 Replay",
+    "category": "Methodology",
+    "certificate": "View",
+    "status": "Completed",
+    "date": "2025-05-19"
+  },
+  {
+    "title": "Data Analysis for Business Professionals Bootcamp: Session 1 Replay",
+    "category": "Data Analysis",
+    "certificate": "View",
+    "status": "Completed",
+    "date": "2025-05-16"
+  },
+  {
+    "title": "Data Analysis for Business Professionals Bootcamp: Session 2 Replay",
+    "category": "Data Analysis",
+    "certificate": "View",
+    "status": "Completed",
+    "date": "2025-05-16"
+  },
+  {
+    "title": "Scrum Guide (2020 Update): An Overview Replay",
+    "category": "Methodology",
+    "certificate": "View",
+    "status": "Completed",
+    "date": "2025-05-15"
+  },
+  {
+    "title": "Introduction to Scrum for the Team Bootcamp: Session 1 Replay",
+    "category": "Methodology",
+    "certificate": "View",
+    "status": "Completed",
+    "date": "2025-05-15"
+  },
+  {
+    "title": "Intermediate/ Advanced Power BI Bootcamp March 2025: Session 4 Replay",
+    "category": "Data Analytics",
+    "certificate": "View",
+    "status": "Completed",
+    "date": "2025-05-14"
+  },
+  {
+    "title": "Intermediate/ Advanced Power BI Bootcamp March 2025: Session 2 Replay",
+    "category": "Data Analytics",
+    "certificate": "View",
+    "status": "Completed",
+    "date": "2025-05-13"
+  },
+  {
+    "title": "Intermediate/Advanced Power BI Bootcamp March 2025: Session 3 Replay",
+    "category": "Data Analytics",
+    "certificate": "View",
+    "status": "Completed",
+    "date": "2025-05-13"
+  },
+  {
+    "title": "Intermediate/ Advanced Power BI Bootcamp March 2025: Session 1 Replay",
+    "category": "Data Analytics",
+    "certificate": "View",
+    "status": "Completed",
+    "date": "2025-05-12"
+  },
+  {
+    "title": "Introduction to Power BI Bootcamp April 2025: Session 4 Replay",
+    "category": "Data Analytics",
+    "certificate": "View",
+    "status": "Completed",
+    "date": "2025-05-12"
+  },
+  {
+    "title": "Introduction to Power BI Bootcamp April 2025: Session 2 Replay",
+    "category": "Data Analytics",
+    "certificate": "View",
+    "status": "Completed",
+    "date": "2025-05-09"
+  },
+  {
+    "title": "Introduction to Power BI Bootcamp April 2025: Session 3 Replay",
+    "category": "Data Analytics",
+    "certificate": "View",
+    "status": "Completed",
+    "date": "2025-05-09"
+  },
+  {
+    "title": "Introduction to Power BI Bootcamp April 2025: Session 1 Replay",
+    "category": "Data Analytics",
+    "certificate": "View",
+    "status": "Completed",
+    "date": "2025-05-07"
+  },
+  {
+    "title": "Data Visualization and Storytelling Bootcamp April 2025: Session 3 Replay",
+    "category": "Data Analytics",
+    "certificate": "View",
+    "status": "Completed",
+    "date": "2025-05-06"
+  },
+  {
+    "title": "Data Visualization and Storytelling Bootcamp April 2025: Session 4 Replay",
+    "category": "Data Analytics",
+    "certificate": "View",
+    "status": "Completed",
+    "date": "2025-05-06"
+  },
+  {
+    "title": "Data Visualization and Storytelling Bootcamp April 2025: Session 1 Replay",
+    "category": "Data Analytics",
+    "certificate": "View",
+    "status": "Completed",
+    "date": "2025-05-05"
+  },
+  {
+    "title": "Data Visualization and Storytelling Bootcamp April 2025: Session 2 Replay",
+    "category": "Data Analytics",
+    "certificate": "View",
+    "status": "Completed",
+    "date": "2025-05-05"
+  },
+  {
+    "title": "Tableau Bootcamp September 2024: Session 3 Replay",
+    "category": "Data Analytics",
+    "certificate": "View",
+    "status": "Completed",
+    "date": "2025-04-29"
+  },
+  {
+    "title": "Tableau Bootcamp September 2024: Session 2 Replay",
+    "category": "Data Analytics",
+    "certificate": "View",
+    "status": "Completed",
+    "date": "2025-04-29"
+  },
+  {
+    "title": "Tableau Bootcamp September 2024: Session 4 Replay",
+    "category": "Data Analytics",
+    "certificate": "View",
+    "status": "Completed",
+    "date": "2025-04-29"
+  },
+  {
+    "title": "Tableau Bootcamp September 2024: Session 1 Replay",
+    "category": "Data Analytics",
+    "certificate": "View",
+    "status": "Completed",
+    "date": "2025-04-28"
+  },
+  {
+    "title": "Tableau Bootcamp March 2025: Session 4 Replay",
+    "category": "Data Analytics",
+    "certificate": "View",
+    "status": "Completed",
+    "date": "2025-04-28"
+  },
+  {
+    "title": "Tableau Bootcamp March 2025: Session 3 Replay",
+    "category": "Data Analytics",
+    "certificate": "View",
+    "status": "Completed",
+    "date": "2025-04-25"
+  },
+  {
+    "title": "Tableau Bootcamp March 2025: Session 1 Replay",
+    "category": "Data Analytics",
+    "certificate": "View",
+    "status": "Completed",
+    "date": "2025-04-24"
+  },
+  {
+    "title": "Tableau Bootcamp March 2025: Session 2 Replay",
+    "category": "Data Analytics",
+    "certificate": "View",
+    "status": "Completed",
+    "date": "2025-04-24"
+  },
+  {
+    "title": "Get Into Programming with Python Bootcamp: Session 4 Replay",
+    "category": "Software Development",
+    "certificate": "View",
+    "status": "Completed",
+    "date": "2025-04-23"
+  },
+  {
+    "title": "Get Into Programming with Python Bootcamp: Session 3 Replay",
+    "category": "Software Development",
+    "certificate": "View",
+    "status": "Completed",
+    "date": "2025-04-23"
+  },
+  {
+    "title": "Get Into Programming with Python Bootcamp: Session 2 Replay",
+    "category": "Software Development",
+    "certificate": "View",
+    "status": "Completed",
+    "date": "2025-04-22"
+  },
+  {
+    "title": "Get Into Programming with Python Bootcamp: Session 1 Replay",
+    "category": "Software Development",
+    "certificate": "View",
+    "status": "Completed",
+    "date": "2025-04-21"
+  },
+  {
+    "title": "Introduction to GitHub Copilot Bootcamp: Session 1 Replay",
+    "category": "Artificial Intelligence",
+    "certificate": "View",
+    "status": "Completed",
+    "date": "2025-04-18"
+  },
+  {
+    "title": "Introduction to RxJS Library Bootcamp: Session 2 Replay",
+    "category": "Software Development",
+    "certificate": "View",
+    "status": "Completed",
+    "date": "2025-04-17"
+  },
+  {
+    "title": "Introduction to RxJS Library Bootcamp: Session 1 Replay",
+    "category": "Software Development",
+    "certificate": "View",
+    "status": "Completed",
+    "date": "2025-04-16"
+  },
+  {
+    "title": "Introduction to GitHub Copilot Bootcamp May 2024: Session 1 Replay",
+    "category": "Artificial Intelligence",
+    "certificate": "View",
+    "status": "Completed",
+    "date": "2025-04-16"
+  },
+  {
+    "title": "Introduction to RxJS Library Bootcamp: Session 1 Replay (July 2024)",
+    "category": "Software Development",
+    "certificate": "View",
+    "status": "Completed",
+    "date": "2025-04-16"
+  },
+  {
+    "title": "Asynchronous JavaScript Bootcamp 2023: Session 2 Replay",
+    "category": "Software Development",
+    "certificate": "View",
+    "status": "Completed",
+    "date": "2025-04-14"
+  },
+  {
+    "title": "Javascript with ECMAScript 2015+ Bootcamp: Session 2 Replay",
+    "category": "Software Development",
+    "certificate": "View",
+    "status": "Completed",
+    "date": "2025-04-11"
+  },
+  {
+    "title": "Asynchronous JavaScript Bootcamp 2023: Session 1 Replay",
+    "category": "Software Development",
+    "certificate": "View",
+    "status": "Completed",
+    "date": "2025-04-11"
+  },
+  {
+    "title": "Javascript with ECMAScript 2015+ Bootcamp: Session 1 Replay",
+    "category": "Software Development",
+    "certificate": "View",
+    "status": "Completed",
+    "date": "2025-04-10"
+  },
+  {
+    "title": "React 17 Bootcamp: Session 1 Replay",
+    "category": "Software Development",
+    "certificate": "View",
+    "status": "Completed",
+    "date": "2025-04-09"
+  },
+  {
+    "title": "React 17 Bootcamp: Session 2 Replay",
+    "category": "Software Development",
+    "certificate": "View",
+    "status": "Completed",
+    "date": "2025-04-09"
+  },
+  {
+    "title": "Angular Bootcamp: Session 1 Replay",
+    "category": "Software Development",
+    "certificate": "View",
+    "status": "Completed",
+    "date": "2025-03-19"
+  },
+  {
+    "title": "AWS Certified SysOps Administrator Associate Bootcamp: Session 3 Replay",
+    "category": "Cloud Computing",
+    "certificate": "View",
+    "status": "Completed",
+    "date": "2025-03-17"
+  },
+  {
+    "title": "AWS Certified SysOps Administrator Associate Bootcamp: Session 4 Replay",
+    "category": "Cloud Computing",
+    "certificate": "View",
+    "status": "Completed",
+    "date": "2025-03-17"
+  },
+  {
+    "title": "AWS Certified SysOps Administrator Associate Bootcamp: Session 1 Replay",
+    "category": "Cloud Computing",
+    "certificate": "View",
+    "status": "Completed",
+    "date": "2025-03-13"
+  },
+  {
+    "title": "AWS Certified SysOps Administrator Associate Bootcamp: Session 2 Replay",
+    "category": "Cloud Computing",
+    "certificate": "View",
+    "status": "Completed",
+    "date": "2025-03-13"
+  },
+  {
+    "title": "AWS Certified Developer Bootcamp: Session 5 Replay",
+    "category": "Cloud Computing",
+    "certificate": "View",
+    "status": "Completed",
+    "date": "2025-03-12"
+  },
+  {
+    "title": "AWS Certified Developer Bootcamp: Session 3 Replay",
+    "category": "Cloud Computing",
+    "certificate": "View",
+    "status": "Completed",
+    "date": "2025-03-11"
+  },
+  {
+    "title": "AWS Certified Developer Bootcamp: Session 4 Replay",
+    "category": "Cloud Computing",
+    "certificate": "View",
+    "status": "Completed",
+    "date": "2025-03-11"
+  },
+  {
+    "title": "AWS Certified Developer Bootcamp: Session 2 Replay",
+    "category": "Cloud Computing",
+    "certificate": "View",
+    "status": "Completed",
+    "date": "2025-03-10"
+  },
+  {
+    "title": "AWS Certified Developer Bootcamp: Session 1 Replay",
+    "category": "Cloud Computing",
+    "certificate": "View",
+    "status": "Completed",
+    "date": "2025-03-07"
+  },
+  {
+    "title": "AWS Cloud Practitioner Bootcamp August 2024: Session 2 Replay",
+    "category": "Cloud Computing",
+    "certificate": "View",
+    "status": "Completed",
+    "date": "2025-03-07"
+  },
+  {
+    "title": "AWS Cloud Practitioner Bootcamp August 2024: Session 1 Replay",
+    "category": "Cloud Computing",
+    "certificate": "View",
+    "status": "Completed",
+    "date": "2025-03-05"
+  },
+  {
+    "title": "AWS Practitioner Bootcamp October 2024: Session 2 Replay",
+    "category": "Cloud Computing",
+    "certificate": "View",
+    "status": "Completed",
+    "date": "2025-03-05"
+  },
+  {
+    "title": "AWS Practitioner Bootcamp October 2024: Session 1 Replay",
+    "category": "Cloud Computing",
+    "certificate": "View",
+    "status": "Completed",
+    "date": "2025-03-04"
+  },
+  {
+    "title": "AWS Solutions Architect Associate 2022: Architecture & Tools",
+    "category": "Cloud Computing",
+    "certificate": "View",
+    "status": "Completed",
+    "date": "2025-02-27"
+  },
+  {
+    "title": "AWS Practitioner Bootcamp January 2025: Session 1 Replay",
+    "category": "Cloud Computing",
+    "certificate": "View",
+    "status": "Completed",
+    "date": "2025-02-27"
+  },
+  {
+    "title": "AWS Practitioner Bootcamp January 2025: Session 2 Replay",
+    "category": "Cloud Computing",
+    "certificate": "View",
+    "status": "Completed",
+    "date": "2025-02-27"
+  },
+  {
+    "title": "AWS Certified Solutions Architect Associate Bootcamp: Session 4 Replay",
+    "category": "Cloud Computing",
+    "certificate": "View",
+    "status": "Completed",
+    "date": "2025-02-25"
+  },
+  {
+    "title": "AWS Certified Solutions Architect Associate Bootcamp: Session 2 Replay",
+    "category": "Cloud Computing",
+    "certificate": "View",
+    "status": "Completed",
+    "date": "2025-02-24"
+  },
+  {
+    "title": "AWS Certified Solutions Architect Associate Bootcamp: Session 1 Replay",
+    "category": "Cloud Computing",
+    "certificate": "View",
+    "status": "Completed",
+    "date": "2025-02-21"
+  },
+  {
+    "title": "CCSP Bootcamp September 2024: Session 3 Replay",
+    "category": "Cybersecurity",
+    "certificate": "View",
+    "status": "Completed",
+    "date": "2025-02-20"
+  },
+  {
+    "title": "CCSP Bootcamp September 2024: Session 2 Replay",
+    "category": "Cybersecurity",
+    "certificate": "View",
+    "status": "Completed",
+    "date": "2025-02-19"
+  },
+  {
+    "title": "CCSP Bootcamp September 2024: Session 1 Replay",
+    "category": "Cybersecurity",
+    "certificate": "View",
+    "status": "Completed",
+    "date": "2025-02-18"
+  },
+  {
+    "title": "CCSP Bootcamp February 2025: Session 3 Replay",
+    "category": "Cybersecurity",
+    "certificate": "View",
+    "status": "Completed",
+    "date": "2025-02-17"
+  },
+  {
+    "title": "CCSP Bootcamp February 2025: Session 2 Replay",
+    "category": "Cybersecurity",
+    "certificate": "View",
+    "status": "Completed",
+    "date": "2025-02-14"
+  },
+  {
+    "title": "Cloud Services: Cloud Computing Concepts",
+    "category": "Cloud Computing",
+    "certificate": "View",
+    "status": "Completed",
+    "date": "2025-02-13"
+  },
+  {
+    "title": "Solutions for Multi-cloud Load Balancing: Load Balancing Kubernetes Solutions",
+    "category": "Cloud Computing",
+    "certificate": "View",
+    "status": "Completed",
+    "date": "2025-02-13"
+  },
+  {
+    "title": "Solutions for Multi-Cloud Load Balancing: Multi-cloud Performance Monitoring",
+    "category": "Cloud Computing",
+    "certificate": "View",
+    "status": "Completed",
+    "date": "2025-02-13"
+  },
+  {
+    "title": "CCSP Bootcamp February 2025: Session 1 Replay",
+    "category": "Cybersecurity",
+    "certificate": "View",
+    "status": "Completed",
+    "date": "2025-02-13"
+  },
+  {
+    "title": "Comparing Multi-cloud Load Balancing Solutions: Load Balancer Vendors",
+    "category": "Cloud Computing",
+    "certificate": "View",
+    "status": "Completed",
+    "date": "2025-02-12"
+  },
+  {
+    "title": "Power Up: Turning on Your Self-starter Potential",
+    "category": "Professional Development",
+    "certificate": "View",
+    "status": "Completed",
+    "date": "2025-01-09"
+  },
+  {
+    "title": "The Skilled CloudOps Engineer: Roles & Responsibilities",
+    "category": "Cloud Operations",
+    "certificate": "View",
+    "status": "Completed",
+    "date": "2024-11-18"
+  },
+  {
+    "title": "The Skilled CloudOps Engineer: Transforming to a CloudOps Engineer",
+    "category": "Cloud Operations",
+    "certificate": "View",
+    "status": "Completed",
+    "date": "2024-11-18"
+  },
+  {
+    "title": "Navigating AI Ethical Challenges and Risks",
+    "category": "Artificial Intelligence",
+    "certificate": "View",
+    "status": "Completed",
+    "date": "2024-11-15"
+  },
+  {
+    "title": "Recognizing Hallucinations, Inaccuracies, and Bias in AI",
+    "category": "Artificial Intelligence",
+    "certificate": "View",
+    "status": "Completed",
+    "date": "2024-11-15"
+  },
+  {
+    "title": "Establishing AI Guardrails and Governance",
+    "category": "Artificial Intelligence",
+    "certificate": "View",
+    "status": "Completed",
+    "date": "2024-11-15"
+  },
+  {
+    "title": "Using AI to Improve the Employee Experience",
+    "category": "Artificial Intelligence",
+    "certificate": "View",
+    "status": "Completed",
+    "date": "2024-11-13"
+  },
+  {
+    "title": "Unlocking Business Solutions with AI-Powered Analytics",
+    "category": "Data Analytics",
+    "certificate": "View",
+    "status": "Completed",
+    "date": "2024-11-13"
+  },
+  {
+    "title": "Reimagining Marketing with Generative AI",
+    "category": "Artificial Intelligence",
+    "certificate": "View",
+    "status": "Completed",
+    "date": "2024-11-13"
+  },
+  {
+    "title": "Reimagining Product Management with Generative AI",
+    "category": "Artificial Intelligence",
+    "certificate": "View",
+    "status": "Completed",
+    "date": "2024-11-13"
+  },
+  {
+    "title": "Reimagining the Customer Experience with Generative AI",
+    "category": "Artificial Intelligence",
+    "certificate": "View",
+    "status": "Completed",
+    "date": "2024-11-12"
+  },
+  {
+    "title": "Reimagining the Sales Process with Generative AI",
+    "category": "Artificial Intelligence",
+    "certificate": "View",
+    "status": "Completed",
+    "date": "2024-11-12"
+  },
+  {
+    "title": "Leading in the Age of Generative AI",
+    "category": "Artificial Intelligence",
+    "certificate": "View",
+    "status": "Completed",
+    "date": "2024-11-12"
+  },
+  {
+    "title": "Leading through the AI Disruption with Empathy (Global)",
+    "category": "Leadership",
+    "certificate": "View",
+    "status": "Completed",
+    "date": "2024-11-12"
+  },
+  {
+    "title": "Encouraging Innovation and Experimentation with AI",
+    "category": "Artificial Intelligence",
+    "certificate": "View",
+    "status": "Completed",
+    "date": "2024-11-12"
+  },
+  {
+    "title": "Leveraging Analytical and Critical Thinking to Implement AI",
+    "category": "Artificial Intelligence",
+    "certificate": "View",
+    "status": "Completed",
+    "date": "2024-09-27"
+  },
+  {
+    "title": "Embracing Risk and Learning from Setbacks with AI Projects",
+    "category": "Artificial Intelligence",
+    "certificate": "View",
+    "status": "Completed",
+    "date": "2024-09-27"
+  },
+  {
+    "title": "Generative AI and Its Impact to Everyday Business",
+    "category": "Artificial Intelligence",
+    "certificate": "View",
+    "status": "Completed",
+    "date": "2024-09-24"
+  },
+  {
+    "title": "Harnessing the Disruption of Generative AI",
+    "category": "Artificial Intelligence",
+    "certificate": "View",
+    "status": "Completed",
+    "date": "2024-09-24"
+  },
+  {
+    "title": "Fostering a Growth Mindset in the Age of AI",
+    "category": "Artificial Intelligence",
+    "certificate": "View",
+    "status": "Completed",
+    "date": "2024-09-24"
+  },
+  {
+    "title": "Leveraging AI as a Team Member",
+    "category": "Artificial Intelligence",
+    "certificate": "View",
+    "status": "Completed",
+    "date": "2024-09-24"
+  },
+  {
+    "title": "CloudOps: Implementing SD-WAN to Optimize Environments",
+    "category": "Cloud Operations",
+    "certificate": "View",
+    "status": "Completed",
+    "date": "2024-07-03"
+  },
+  {
+    "title": "Final Exam: CloudOps Engineer",
+    "category": "Cloud Operations",
+    "certificate": "View",
+    "status": "Completed",
+    "date": "2024-07-03"
+  },
+  {
+    "title": "DevOps Engineer to Cloud Architect",
+    "category": "Cloud Architecture",
+    "certificate": "View",
+    "status": "Completed",
+    "date": "2024-07-03"
+  },
+  {
+    "title": "CloudOps Engineer",
+    "category": "Cloud Operations",
+    "certificate": "View",
+    "status": "Completed",
+    "date": "2024-07-03"
+  },
+  {
+    "title": "Securing CloudOps Deployments: Security Standards for Multi-cloud",
+    "category": "Cloud Security",
+    "certificate": "View",
+    "status": "Completed",
+    "date": "2024-07-02"
+  },
+  {
+    "title": "Securing CloudOps Deployments: Implementing Multi-cloud Security",
+    "category": "Cloud Security",
+    "certificate": "View",
+    "status": "Completed",
+    "date": "2024-07-02"
+  },
+  {
+    "title": "OpenStack in CloudOps: Automation",
+    "category": "Cloud Operations",
+    "certificate": "View",
+    "status": "Completed",
+    "date": "2024-07-01"
+  },
+  {
+    "title": "OpenStack in CloudOps: Managing Multi-cloud with OpenStack",
+    "category": "Cloud Operations",
+    "certificate": "View",
+    "status": "Completed",
+    "date": "2024-06-28"
+  },
+  {
+    "title": "Managing Multi-cloud Containers Using Kubernetes",
+    "category": "Cloud Computing",
+    "certificate": "View",
+    "status": "Completed",
+    "date": "2024-06-26"
+  },
+  {
+    "title": "Docker & Multi-cloud: Multi-host, Multi-cloud Management with Docker Enterprise",
+    "category": "Cloud Computing",
+    "certificate": "View",
+    "status": "Completed",
+    "date": "2024-06-26"
+  },
+  {
+    "title": "Docker & Multi-cloud: Managing Multi-cloud with Docker",
+    "category": "Cloud Computing",
+    "certificate": "View",
+    "status": "Completed",
+    "date": "2024-06-24"
+  },
+  {
+    "title": "CloudOps Interoperability: Inter-cloud Integration & Implementation",
+    "category": "Cloud Operations",
+    "certificate": "View",
+    "status": "Completed",
+    "date": "2024-06-21"
+  },
+  {
+    "title": "CloudOps Interoperability: Modeling Cloud Computing for Integration",
+    "category": "Cloud Operations",
+    "certificate": "View",
+    "status": "Completed",
+    "date": "2024-06-21"
+  },
+  {
+    "title": "Implementing IaaS & Orchestration for Multi-cloud Environments",
+    "category": "Cloud Operations",
+    "certificate": "View",
+    "status": "Completed",
+    "date": "2024-06-20"
+  },
+  {
+    "title": "DevOps to CloudOps for Multi-cloud",
+    "category": "Cloud Operations",
+    "certificate": "View",
+    "status": "Completed",
+    "date": "2024-06-19"
+  },
+  {
+    "title": "DevOps Automation Across Platforms: Working with Multi-cloud Tools",
+    "category": "DevOps",
+    "certificate": "View",
+    "status": "Completed",
+    "date": "2024-06-19"
+  },
+  {
+    "title": "Cloud Engineer",
+    "category": "Cloud Computing",
+    "certificate": "View",
+    "status": "Completed",
+    "date": "2024-06-19"
+  },
+  {
+    "title": "Final Exam: Cloud Engineer",
+    "category": "Cloud Computing",
+    "certificate": "View",
+    "status": "Completed",
+    "date": "2024-06-18"
+  },
+  {
+    "title": "DevOps Automation Across Platforms: CloudOps for Multi-cloud Deployments",
+    "category": "DevOps",
+    "certificate": "View",
+    "status": "Completed",
+    "date": "2024-05-15"
+  },
+  {
+    "title": "GCP DevOps: CloudOps with Google Cloud Platform",
+    "category": "Cloud Computing",
+    "certificate": "View",
+    "status": "Completed",
+    "date": "2024-05-09"
+  },
+  {
+    "title": "Azure DevOps: Managing Agile Lifecycle",
+    "category": "DevOps",
+    "certificate": "View",
+    "status": "Completed",
+    "date": "2024-05-06"
+  }
+]
