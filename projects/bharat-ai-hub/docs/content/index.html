@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Content Intelligence - Bharat AI Hub</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .header {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 1rem 0;
+            margin-bottom: 2rem;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: white;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: opacity 0.3s;
+        }
+
+        .nav-links a:hover {
+            opacity: 0.8;
+        }
+
+        .hero {
+            text-align: center;
+            color: white;
+            margin-bottom: 3rem;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .feature-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 2rem;
+            text-align: center;
+            color: white;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: #ffd700;
+        }
+
+        .feature-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .feature-card p {
+            opacity: 0.9;
+            line-height: 1.6;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .stat-card {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            border-radius: 10px;
+            padding: 1.5rem;
+            text-align: center;
+            color: white;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #ffd700;
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        .demo-section {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 2rem;
+            margin-bottom: 3rem;
+            color: white;
+        }
+
+        .demo-section h2 {
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 2rem;
+        }
+
+        .demo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .demo-card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .demo-card h4 {
+            margin-bottom: 1rem;
+            color: #ffd700;
+        }
+
+        .language-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .language-tag {
+            background: rgba(255, 215, 0, 0.2);
+            border: 1px solid #ffd700;
+            border-radius: 20px;
+            padding: 0.5rem 1rem;
+            font-size: 0.9rem;
+            text-align: center;
+        }
+
+        .cta {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #ffd700;
+            color: #333;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.3s, box-shadow 0.3s;
+            margin: 0 0.5rem;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(255, 215, 0, 0.4);
+        }
+
+        .footer {
+            text-align: center;
+            color: white;
+            opacity: 0.8;
+            padding: 2rem 0;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <div class="logo">
+                    <i class="fas fa-brain"></i> Content Intelligence
+                </div>
+                <div class="nav-links">
+                    <a href="../index.html">Home</a>
+                    <a href="#features">Features</a>
+                    <a href="#demo">Demo</a>
+                    <a href="https://github.com/ArnabSen08/bharat-ai-hub">GitHub</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="hero">
+            <h1>Content Intelligence</h1>
+            <p>AI-powered content creation, translation, and management for the digital age. Create, translate, and moderate content across 22+ Indian languages.</p>
+        </section>
+
+        <section class="stats">
+            <div class="stat-card">
+                <span class="stat-number">80%</span>
+                <span class="stat-label">Faster Content Creation</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-number">22+</span>
+                <span class="stat-label">Languages Supported</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-number">10M+</span>
+                <span class="stat-label">Content Pieces Generated</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-number">95%</span>
+                <span class="stat-label">Moderation Accuracy</span>
+            </div>
+        </section>
+
+        <section class="features" id="features">
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-magic"></i>
+                </div>
+                <h3>AI Content Generation</h3>
+                <p>Create high-quality articles, blogs, social media posts, and marketing content using advanced AI models trained on diverse datasets.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-language"></i>
+                </div>
+                <h3>Multi-Language Translation</h3>
+                <p>Translate content across 22+ Indian languages with context-aware AI that preserves meaning, tone, and cultural nuances.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <h3>Content Moderation</h3>
+                <p>Automated content moderation using AI to detect inappropriate content, hate speech, and ensure platform safety.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-video"></i>
+                </div>
+                <h3>Video Analytics</h3>
+                <p>Analyze video content for automatic tagging, summarization, and content insights using computer vision and NLP.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-universal-access"></i>
+                </div>
+                <h3>Accessibility Tools</h3>
+                <p>Text-to-speech and speech-to-text capabilities to make content accessible to users with different abilities.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-chart-bar"></i>
+                </div>
+                <h3>Content Analytics</h3>
+                <p>Deep insights into content performance, engagement metrics, and audience preferences to optimize content strategy.</p>
+            </div>
+        </section>
+
+        <section class="demo-section" id="demo">
+            <h2>Supported Languages</h2>
+            <div class="language-grid">
+                <div class="language-tag">Hindi (हिन्दी)</div>
+                <div class="language-tag">Bengali (বাংলা)</div>
+                <div class="language-tag">Telugu (తెలుగు)</div>
+                <div class="language-tag">Marathi (मराठी)</div>
+                <div class="language-tag">Tamil (தமிழ்)</div>
+                <div class="language-tag">Gujarati (ગુજરાતી)</div>
+                <div class="language-tag">Kannada (ಕನ್ನಡ)</div>
+                <div class="language-tag">Malayalam (മലയാളം)</div>
+                <div class="language-tag">Punjabi (ਪੰਜਾਬੀ)</div>
+                <div class="language-tag">Odia (ଓଡ଼ିଆ)</div>
+                <div class="language-tag">Assamese (অসমীয়া)</div>
+                <div class="language-tag">Urdu (اردو)</div>
+                <div class="language-tag">Sanskrit (संस्कृत)</div>
+                <div class="language-tag">Kashmiri (कॉशुर)</div>
+                <div class="language-tag">Nepali (नेपाली)</div>
+                <div class="language-tag">Konkani (कोंकणी)</div>
+                <div class="language-tag">Manipuri (মৈতৈলোন্)</div>
+                <div class="language-tag">Bodo (बर')</div>
+                <div class="language-tag">Dogri (डोगरी)</div>
+                <div class="language-tag">Maithili (मैथिली)</div>
+                <div class="language-tag">Santali (ᱥᱟᱱᱛᱟᱲᱤ)</div>
+                <div class="language-tag">Sindhi (سنڌي)</div>
+            </div>
+        </section>
+
+        <section class="demo-section">
+            <h2>Content Creation Examples</h2>
+            <div class="demo-grid">
+                <div class="demo-card">
+                    <h4>Blog Articles</h4>
+                    <p>Generate comprehensive blog posts on any topic with proper structure, SEO optimization, and engaging content.</p>
+                </div>
+                <div class="demo-card">
+                    <h4>Social Media Posts</h4>
+                    <p>Create engaging social media content tailored for different platforms with appropriate hashtags and tone.</p>
+                </div>
+                <div class="demo-card">
+                    <h4>Marketing Copy</h4>
+                    <p>Develop compelling marketing content, product descriptions, and advertising copy that converts.</p>
+                </div>
+                <div class="demo-card">
+                    <h4>Technical Documentation</h4>
+                    <p>Generate clear, comprehensive technical documentation, API guides, and user manuals.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta">
+            <a href="https://github.com/ArnabSen08/bharat-ai-hub" class="btn">
+                <i class="fas fa-code"></i> View Source Code
+            </a>
+            <a href="../demo.html" class="btn">
+                <i class="fas fa-play"></i> Try Demo
+            </a>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Bharat AI Hub. Built with ❤️ for India's Digital Future.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Add smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Animate stats on scroll
+        const observerOptions = {
+            threshold: 0.5,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const statNumbers = entry.target.querySelectorAll('.stat-number');
+                    statNumbers.forEach(stat => {
+                        stat.style.opacity = '1';
+                        stat.style.transform = 'scale(1)';
+                    });
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.stats').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Language tag hover effect
+        document.querySelectorAll('.language-tag').forEach(tag => {
+            tag.addEventListener('mouseenter', function() {
+                this.style.transform = 'scale(1.05)';
+                this.style.background = 'rgba(255, 215, 0, 0.3)';
+            });
+            
+            tag.addEventListener('mouseleave', function() {
+                this.style.transform = 'scale(1)';
+                this.style.background = 'rgba(255, 215, 0, 0.2)';
+            });
+        });
+    </script>
+</body>
+</html>

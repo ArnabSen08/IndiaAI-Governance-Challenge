@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bharat AI Hub - Unified AI Platform for Social Impact</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            color: white;
+            padding: 40px 0;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .tagline {
+            font-size: 1.3em;
+            opacity: 0.9;
+        }
+
+        .modules-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 25px;
+            margin: 40px 0;
+        }
+
+        .module-card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+        }
+
+        .module-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+        }
+
+        .module-icon {
+            font-size: 3em;
+            margin-bottom: 15px;
+        }
+
+        .module-title {
+            font-size: 1.5em;
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+
+        .module-description {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .module-features {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .module-features li {
+            padding: 5px 0;
+            color: #555;
+        }
+
+        .module-features li:before {
+            content: "✓ ";
+            color: #667eea;
+            font-weight: bold;
+        }
+
+        .cta-section {
+            background: white;
+            border-radius: 15px;
+            padding: 40px;
+            text-align: center;
+            margin: 40px 0;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px 40px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-size: 1.2em;
+            margin: 10px;
+            transition: transform 0.3s;
+        }
+
+        .cta-button:hover {
+            transform: scale(1.05);
+        }
+
+        .stats {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin: 30px 0;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .stat-number {
+            font-size: 2.5em;
+            color: #667eea;
+            font-weight: bold;
+        }
+
+        .stat-label {
+            color: #666;
+            margin-top: 5px;
+        }
+
+        footer {
+            text-align: center;
+            color: white;
+            padding: 30px 0;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2em;
+            }
+
+            .modules-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🇮🇳 Bharat AI Hub</h1>
+            <p class="tagline">Unified AI Platform for Social Impact</p>
+            <p>Addressing Healthcare, Retail, Rural, Learning, Content & Community Challenges</p>
+        </header>
+
+        <div class="modules-grid">
+            <!-- Healthcare Module -->
+            <div class="module-card" onclick="location.href='/healthcare'">
+                <div class="module-icon">🏥</div>
+                <h2 class="module-title">Healthcare Intelligence</h2>
+                <p class="module-description">
+                    AI-powered healthcare solutions for better diagnosis and accessibility
+                </p>
+                <ul class="module-features">
+                    <li>AI Diagnosis Assistant</li>
+                    <li>Prescription OCR</li>
+                    <li>Telemedicine Platform</li>
+                    <li>22+ Language Support</li>
+                </ul>
+            </div>
+
+            <!-- Retail Module -->
+            <div class="module-card" onclick="location.href='/retail'">
+                <div class="module-icon">🛒</div>
+                <h2 class="module-title">Smart Retail & Commerce</h2>
+                <p class="module-description">
+                    Intelligent retail solutions for demand forecasting and optimization
+                </p>
+                <ul class="module-features">
+                    <li>Demand Forecasting</li>
+                    <li>Dynamic Pricing</li>
+                    <li>Customer Analytics</li>
+                    <li>Supply Chain Optimization</li>
+                </ul>
+            </div>
+
+            <!-- Rural Module -->
+            <div class="module-card" onclick="location.href='/rural'">
+                <div class="module-icon">🌾</div>
+                <h2 class="module-title">Rural Empowerment</h2>
+                <p class="module-description">
+                    Empowering farmers with AI-driven agricultural insights
+                </p>
+                <ul class="module-features">
+                    <li>Crop Advisory System</li>
+                    <li>Disease Detection</li>
+                    <li>Market Linkage</li>
+                    <li>Weather Analytics</li>
+                </ul>
+            </div>
+
+            <!-- Learning Module -->
+            <div class="module-card" onclick="location.href='/learning'">
+                <div class="module-icon">📚</div>
+                <h2 class="module-title">Learning Hub</h2>
+                <p class="module-description">
+                    Personalized learning experiences powered by AI
+                </p>
+                <ul class="module-features">
+                    <li>Adaptive Learning Paths</li>
+                    <li>AI Tutor (24/7)</li>
+                    <li>Code Assistant</li>
+                    <li>Skill Gap Analysis</li>
+                </ul>
+            </div>
+
+            <!-- Content Module -->
+            <div class="module-card" onclick="location.href='/content'">
+                <div class="module-icon">🎬</div>
+                <h2 class="module-title">Content Intelligence</h2>
+                <p class="module-description">
+                    AI-powered content creation and management
+                </p>
+                <ul class="module-features">
+                    <li>Content Generation</li>
+                    <li>Multi-Language Translation</li>
+                    <li>Content Moderation</li>
+                    <li>Video Analytics</li>
+                </ul>
+            </div>
+
+            <!-- Community Module -->
+            <div class="module-card" onclick="location.href='/community'">
+                <div class="module-icon">🤝</div>
+                <h2 class="module-title">Community Connect</h2>
+                <p class="module-description">
+                    Connecting communities with services and resources
+                </p>
+                <ul class="module-features">
+                    <li>Government Services</li>
+                    <li>Grievance Redressal</li>
+                    <li>Emergency Response</li>
+                    <li>Community Forums</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="cta-section">
+            <h2>Projected Impact</h2>
+            <div class="stats">
+                <div class="stat-item">
+                    <div class="stat-number">60%</div>
+                    <div class="stat-label">Faster Diagnosis</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">40%</div>
+                    <div class="stat-label">Inventory Efficiency</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">25%</div>
+                    <div class="stat-label">Farmer Income Increase</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">5M+</div>
+                    <div class="stat-label">Students Reached</div>
+                </div>
+            </div>
+
+            <h2 style="margin-top: 30px;">Get Started</h2>
+            <a href="/api" class="cta-button">Explore API</a>
+            <a href="https://github.com/ArnabSen08/bharat-ai-hub" class="cta-button">View on GitHub</a>
+        </div>
+
+        <footer>
+            <p>Built with ❤️ for Bharat's Digital Future</p>
+            <p>AWS AI for Bharat Hackathon 2026</p>
+            <p style="margin-top: 10px;">
+                <a href="https://github.com/ArnabSen08/bharat-ai-hub" style="color: white;">GitHub</a> |
+                <a href="/docs" style="color: white;">Documentation</a> |
+                <a href="mailto:beanclarksum@gmail.com" style="color: white;">Contact</a>
+            </p>
+        </footer>
+    </div>
+
+    <script>
+        // Simple analytics
+        console.log('Bharat AI Hub - Unified AI Platform');
+        console.log('Repository: https://github.com/ArnabSen08/bharat-ai-hub');
+    </script>
+</body>
+</html>
