@@ -424,3 +424,44 @@ View the responsive web demo showcasing:
 - Contact information
 
 ---
+
+## 📦 Consolidated Projects Portfolio
+
+This repository now includes **15 additional projects** merged into a unified portfolio. All projects are organized under the `projects/` directory with complete git history preserved.
+
+**[View Complete Projects Index →](PROJECTS_INDEX.md)**
+
+### Project Categories
+
+#### 🤖 AI & Machine Learning (8 projects)
+- Agentic AI Production System
+- Publication Assistant
+- Ready Tensor (RAG-Based AI)
+- Bharat AI Hub
+- Elastic Aviation RAG Blog
+- Gemini3 Hackathon
+- Multilingual Mandi
+- Bangalore Tech Culture Assistant
+
+#### 🌐 Web Development (2 projects)
+- Little Lemon Restaurant
+- Coursera Portfolio
+
+#### ⛓️ Blockchain (1 project)
+- Blockchain Lottery DApp
+
+#### 📊 Data Science (1 project)
+- Data Weaver Dashboard
+
+#### 🛠️ Developer Tools (3 projects)
+- The Referee
+- DevToolkit
+- Smart Desktop Organizer
+
+Each project includes:
+- Complete source code and documentation
+- Full git history
+- Individual README files
+- GitHub Pages links (where applicable)
+
+---
