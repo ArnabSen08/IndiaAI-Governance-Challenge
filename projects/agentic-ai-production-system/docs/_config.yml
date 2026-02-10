@@ -1,0 +1,40 @@
+# GitHub Pages Configuration
+title: Multi-Agent AI System
+description: Production-ready multi-agent AI system for the Agentic AI Certification Program
+url: "https://your-username.github.io"
+baseurl: "/multi-agent-ai-system"
+
+# Theme
+theme: minima
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# Navigation
+header_pages:
+  - api.md
+  - deployment.md
+  - troubleshooting.md
+
+# Social links
+github_username: your-username
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+# Exclude files
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
