@@ -1,0 +1,30 @@
+theme: jekyll-theme-minimal
+title: Ready Tensor - RAG-Based AI Assistant
+description: A Retrieval-Augmented Generation powered question-answering assistant built with LangChain
+url: https://yourusername.github.io/ready-tensor
+author: Ready Tensor Project Team
+repository: yourusername/ready-tensor
+
+# Navigation
+navigation:
+  - name: Home
+    url: /
+  - name: Getting Started
+    url: /getting-started/
+  - name: GitHub Repo
+    url: https://github.com
+
+# Build settings
+markdown: kramdown
+plugins:
+  - jekyll-seo-tag
+  - jekyll-paginate
+  - jekyll-relative-links
+
+exclude:
+  - venv
+  - env
+  - .venv
+  - node_modules
+  - .git
+  - .gitignore
