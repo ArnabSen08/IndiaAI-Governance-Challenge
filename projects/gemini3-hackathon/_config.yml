@@ -1,0 +1,28 @@
+# GitHub Pages configuration for Gemini 3 Hackathon
+title: "Gemini 3 AI Assistant"
+description: "AI-powered application leveraging Gemini 3 API for social good - Built for the Gemini 3 Hackathon"
+url: "https://arnabsen08.github.io"
+baseurl: "/gemini3-hackathon"
+
+# Theme
+theme: minima
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+
+# Include files
+include:
+  - index.html
+  - script.js
+
+# Exclude files
+exclude:
+  - README.md
+  - requirements.txt
+  - app.py
+  - run_demo.py
+  - venv/
+  - __pycache__/
+  - "*.py"
