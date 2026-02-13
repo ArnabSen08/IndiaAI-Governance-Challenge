@@ -255,9 +255,8 @@ GitHub profile content and featured projects:
 - [Projects Index](../PROJECTS_INDEX.md)
 - [Repository Optimization Guide](../REPOSITORY_OPTIMIZATION_GUIDE.md)
 
----
 
-*Last Updated: $(Get-Date -Format "MMMM dd, yyyy")*
+*Last Updated: $(Get-Date -Format 'MMMM dd, yyyy')*
 "@
 
 Set-Content -Path "docs/README.md" -Value $docsReadme -Encoding UTF8
@@ -291,9 +290,8 @@ Run scripts from the repository root:
 .\scripts\script-name.ps1
 \`\`\`
 
----
 
-*Last Updated: $(Get-Date -Format "MMMM dd, yyyy")*
+*Last Updated: $(Get-Date -Format 'MMMM dd, yyyy')*
 "@
 
 Set-Content -Path "scripts/README.md" -Value $scriptsReadme -Encoding UTF8
@@ -390,7 +388,7 @@ Write-Host ""
 Write-Host "Next steps:" -ForegroundColor Cyan
 Write-Host "  1. Review the changes: git status" -ForegroundColor White
 Write-Host "  2. Test that everything works" -ForegroundColor White
-Write-Host "  3. Commit changes: git add . && git commit -m 'Reorganize repository structure'" -ForegroundColor White
+Write-Host "  3. Commit changes: git add . ; git commit -m 'Reorganize repository structure'" -ForegroundColor White
 Write-Host "  4. Push to GitHub: git push origin master" -ForegroundColor White
 Write-Host ""
 Write-Host "  If you need to rollback: git checkout backup-before-reorganization" -ForegroundColor Yellow
